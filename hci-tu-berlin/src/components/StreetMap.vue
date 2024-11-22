@@ -1,0 +1,44 @@
+<template>
+    <div id="map" style="height: 400px;"></div>
+  </template>
+  
+  <script>
+  import L from "leaflet";
+  import "leaflet/dist/leaflet.css";
+  
+  export default {
+    name: "StreetMap",
+    mounted() {
+      // Erstelle eine Karte und setze den View auf die gewünschten Koordinaten (z. B. für Berlin)
+      const map = L.map("map").setView([52.51489, 13.32617], 20); // Beispielkoordinaten
+  
+      // Füge OpenStreetMap als TileLayer hinzu
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors",
+      }).addTo(map);
+  
+      // Erstelle ein benutzerdefiniertes Icon für den Marker mit den CDN-Links
+      const customIcon = new L.Icon({
+        iconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",  // CDN für Marker
+        iconSize: [25, 41],  // Standardgröße für Marker
+        iconAnchor: [12, 41],  // Den Anker des Markers setzen (wo der Marker auf die Karte gesetzt wird)
+        popupAnchor: [1, -34], // Popup-Position relativ zum Marker
+        shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png", // Marker Schatten
+        shadowSize: [41, 41], // Größe des Schattens
+        shadowAnchor: [12, 41] // Position des Schattens
+      });
+  
+      // Markiere den Standort mit einem benutzerdefinierten Marker
+      const marker = L.marker([52.51489, 13.32617], { icon: customIcon }).addTo(map); // Position des Markers
+      marker.bindPopup("HCI-TUB").openPopup(); // Popup beim Klick auf Marker
+    },
+  };
+  </script>
+  
+  <style scoped>
+  #map {
+    width: 75%;
+    height: 400px;
+  }
+  </style>
+  

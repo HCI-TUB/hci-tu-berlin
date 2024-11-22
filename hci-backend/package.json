@@ -1,0 +1,12 @@
+{
+    "name": "hci-backend",
+    "version": "1.0.0",
+    "description": "Your project description",
+    "main": "index.js",
+    "scripts": {
+      "start": "node fetchID.js"
+    },
+    "dependencies": {
+      "axios": "^0.21.1"
+    }
+  }
