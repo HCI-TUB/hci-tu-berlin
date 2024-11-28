@@ -16,6 +16,9 @@ const limiter = rateLimit({
   message: "Zu viele Anfragen, bitte versuchen Sie es später erneut.",
 });
 
+app.use(express.static('static'))
+
+
 // Limiter auf die API anwenden
 app.use("/api/papers", limiter);
 
@@ -58,6 +61,7 @@ app.get("/api/papers", async (req, res) => {
 
     res.json(allPapers); // Publikationen als JSON zurückgeben
   } catch (error) {
+    console.log(error)
     console.error("Fehler beim Abrufen der Publikationen:", error.message);
     res.status(500).json({ error: "Fehler beim Abrufen der Daten" });
   }

@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+app.use(express.static('static'))
+
 // Semantic Scholar API Base URL
 const BASE_URL = "https://api.semanticscholar.org/graph/v1";
 

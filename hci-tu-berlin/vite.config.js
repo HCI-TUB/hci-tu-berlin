@@ -6,7 +6,10 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  base: '/hci-tu-berlin/', 
+  build: {
+    outDir: '../hci-backend/static'
+  },
+  // base: '/hci-tu-berlin/', 
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
