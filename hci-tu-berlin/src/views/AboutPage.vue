@@ -12,23 +12,11 @@ Contact us if you would like to join us or exchange ideas!</p>
 <div class="py-6">
 <hr>
 </div>
-<KontaktCard
-      name="Prof. Dr. Ceenu George"
-      email="ceenu.george@tu-berlin.de"
-      einrichtung="Mensch-Computer-Interaktion"
-      sekretariat="EN-20"
-      gebaeude="E-N"
-      raum="E-N 358"
-    />
   </div>
 </template>
 <script>
-import KontaktCard from '@/components/KontaktCard.vue';
 
 export default {
-  name: 'AboutPage',
-  components: {
-    KontaktCard
-  }
+  name: 'AboutPage'
 };
 </script>

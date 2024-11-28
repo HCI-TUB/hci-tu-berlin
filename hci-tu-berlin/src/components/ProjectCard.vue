@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h2 class="text-2xl mb-2 tracking-wide text-justify">{{ title }}</h2> <!-- Added tracking-wide class -->
+    <h2 class="text-2xl mb-2 tracking-wide text-justify">{{ title }}</h2> 
     
-    <p class="text-gray-700 text-left">{{ text }}</p> <!-- Added text-left class -->
+    <p class="text-gray-700 text-left">{{ text }}</p> 
     <div v-if="media" class="py-6 mb-4">
       <img v-if="isImage" :src="media" alt="Project Media" class="w-full h-auto max-w-full lg:max-w-[400px] md:max-w-[350px] sm:max-w-[200px]" />
       <video v-if="isVideo" :src="media" controls class="w-full h-auto max-w-full lg:max-w-[400px] md:max-w-[350px] sm:max-w-[200px]"></video>

@@ -13,7 +13,6 @@
         </div>
   <ul class="flex gap-4 md:flex-col items-start sm:gap-4 text-left text-xl">
     <router-link to="/" class="hover:text-custom-red">About</router-link>
-       <li> <router-link to="/teaching" class="hover:text-custom-red">Teaching</router-link></li>
        <li>  <router-link to="/projects" class="hover:text-custom-red">Research</router-link></li>
        <li> <router-link to="/people" class="hover:text-custom-red">People</router-link></li>
        <li> <router-link to="/publications" class="hover:text-custom-red">Publications</router-link></li>
@@ -22,7 +21,6 @@
 </div>
 
 
-<!-- Main Content, der sich abhängig von der Route ändert -->
 <main class="w-full">
   <div class="flex flex-col gap-8 w-full sm:w-[40rem] md:w-[50rem] md:my-12 mb-12">
   <router-view />

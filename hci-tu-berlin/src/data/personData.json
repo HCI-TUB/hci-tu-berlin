@@ -1,0 +1,189 @@
+{
+  "persons": [
+    {
+      "id": "1",
+      "name": "Prof.Dr. Ceenu George",
+      "email": "ceenu.george@tu-berlin.de",
+      "room": "E-N 358",
+      "officeHours": "",
+      "address": "Einsteinufer 17, Sekr. EN-20",
+      "description_short": "Professor for Human Computer Interaction at TU Berlin. HCI researcher with 9 years of industry research and 7 years of academic research experience in international institutions.",
+      "description": "HCI researcher with 9 years of industry research and 7 years of academic research experience in international institutions. Proven track record of managing and delivering projects, while fostering long-lasting relationships across all stakeholders. Strong analytical skills, capability to think creatively and excellence in innovation are evident in the highly-cited research output to date.",
+      "photo": "public/people/ceenu.png",
+      "cv": [
+        {
+          "title": "Education",
+          "items": [
+            {
+              "year": "2016-2020",
+              "title": "Ludwig-Maximilians-Universität München, DE",
+              "description": "Dr.rer.nat, \"Virtual Reality Interfaces for Seamless Interaction with the Physical Reality\""
+            },
+            {
+              "year": "2010-2012",
+              "title": "University of Sussex, UK",
+              "description": "M.Sc Human Centred Computer Systems"
+            },
+            {
+              "year": "July 2011- Aug. 2011",
+              "title": "University of Bath, UK",
+              "description": "B.Sc. Computer Science with Business"
+            }
+          ]
+        },
+        {
+          "title": "Experience",
+          "items": [
+            {
+              "year": "Since Nov 2023",
+              "title": "Professor for Human Computer Interaction (TT W3) at TU Berlin",
+              "description": "Establishing and leading the Human Computer Interaction lab at the Electrical Eng. and Comp. Science faculty"
+            },
+            {
+              "year": "Sep. 2022 - Nov. 2023",
+              "title": "Senior Researcher",
+              "description": "Google Munich, Usable Security and Privacy Research"
+            },
+            {
+              "year": "Sep. 2021 - Sep. 2022",
+              "title": "Visiting Professor (W3)(part-time, 50%)",
+              "description": "University of Augsburg, Human-Centered Artificial Intelligence (Prof.Dr. Elisabeth André)"
+            },
+            {
+              "year": "Sep. 2020 - Aug. 2021",
+              "title": "Post-doctoral Researcher",
+              "description": "Ludwig-Maximilians-Universität München, DE - Media Informatics Group (Prof. Dr. Heinrich Hußmann)"
+            },
+            {
+              "year": "Apr. 2016 - Sep. 2020",
+              "title": "Researcher",
+              "description": "Ludwig-Maximilians-Universität München, DE - Media Informatics Group (Prof. Dr. Heinrich Hußmann). Maternity leave: September 2017 – August 2018"
+            },
+            {
+              "year": "Jul. 2013 - Feb. 2016",
+              "title": "Senior Digital Product Manager",
+              "description": "PAYBACK – American Express, Munich, DE. Maternity leave: March 2015 – February 2016"
+            },
+            {
+              "year": "Nov. 2011 - Apr. 2013",
+              "title": "Digital Product Manager/UXR Lead",
+              "description": "American Express, London, UK"
+            },
+            {
+              "year": "Sep. 2010 - Nov. 2011",
+              "title": "User Experience Researcher",
+              "description": "American Express, London & Brighton, UK"
+            },
+            {
+              "year": "June 2009 - Aug. 2009",
+              "title": "Analyst",
+              "description": "UNODC – United Nations, Vienna, AUT"
+            },
+            {
+              "year": "June 2008 - June 2009",
+              "title": "Developer",
+              "description": "Goldman Sachs, London, UK"
+            }
+          ]
+        }
+      ],
+      "research_projects": [],
+      "publications": []
+    },
+    {
+      "id": "2",
+      "name": "David Fuhry",
+      "email": "d.fuhry@tu-berlin.de",
+      "room": "EN-357",
+      "officeHours": "Tuesdays 14:00-16:00 and on appointment",
+      "address": "Einsteinufer 17, Sekr. EN-20",
+      "description_short": "Research Assistant and PhD Student at TU Berlin.",
+      "description": "Currently I'm primarily interested in the effective representation and communication of Cultural Heritage, particularly intangible cultural heritage, through XR environments and applications. I'm also open to topics in the fields of image processing, natural language processing and other adjacent fields.",
+      "photo": "/people/david.png",
+      "cv": [
+        {
+          "title": "Professional and Academic Experience",
+          "items": [
+            {
+              "year": "Since 2024",
+              "title": "Research Assistant and PhD Student",
+              "description": "Human-Computer Interaction Group, TU Berlin"
+            },
+            {
+              "year": "2024",
+              "title": "Software Engineer",
+              "description": "Sedidoc GmbH"
+            },
+            {
+              "year": "2022 - 2023",
+              "title": "Research Assistant",
+              "description": "Research Center Digital Organology, Museum of Musical Instruments, Leipzig University"
+            },
+            {
+              "year": "2020 - 2022",
+              "title": "Student Assistant",
+              "description": "Research Center Digital Organology, Museum of Musical Instruments, Leipzig University"
+            }
+          ]
+        },
+        {
+          "title": "Education",
+          "items": [
+            {
+              "year": "2022",
+              "title": "M.Sc., Digital Humanities",
+              "description": "Leipzig University"
+            },
+            {
+              "year": "2022",
+              "title": "B.A., Cultural Studies",
+              "description": "Leipzig University"
+            },
+            {
+              "year": "2020",
+              "title": "B.Sc., Digital Humanities",
+              "description": "Leipzig University"
+            }
+          ]
+        }
+      ],
+      "research_projects": [
+        {
+          "title": "Principal Author of the Image to MIDI digitisation software",
+          "description": "Part of the BMBF funded DISKOS project"
+        }
+      ],
+      "publications": []
+    },
+    {
+      "id": "3",
+      "name": "Rishab Bhattacharyya",
+      "email": "person3@example.com",
+      "room": "",
+      "officeHours": "",
+      "description": "",
+      "photo": "path/to/photo3.jpg",
+      "cv": []
+    },
+    {
+      "id": "4",
+      "name": "Thekla Mayer",
+      "email": "t.mayer@campus.tu-berlin.de",
+      "room": "",
+      "officeHours": "",
+      "description": "Working student at HCI Lab. B.Sc. in Computer Science",
+      "photo": "path/to/photo4.jpg",
+      "cv": []
+    },
+    {
+      "id": "5",
+      "name": "Tessa Billens",
+      "email": "t.billens@campus.tu-berlin.de",
+      "room": "",
+      "officeHours": "",
+      "description": "Working student at HCI Lab. B.Sc. in Media Computer Science",
+      "photo": "path/to/photo4.jpg",
+      "cv": []
+    }
+  ]
+}

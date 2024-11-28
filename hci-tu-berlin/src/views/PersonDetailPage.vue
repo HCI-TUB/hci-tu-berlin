@@ -1,6 +1,9 @@
 <template>
   <div class="text-left w-full p-4">
-    <h1 class="text-3xl mb-4">{{ person.name }}</h1>
+    <button @click="goBack" class="text-xl mr-4">
+        ←
+      </button>
+    <h1 class="text-3xl text-left mb-8 tracking-widest">{{ person.name }}</h1>
     <div class="flex flex-col items-start mb-4">
       <div class="w-48 h-48 mb-4 lg:mb-0 lg:mr-4">
         <img :src="imageSrc" alt="Person Photo" class="w-full h-full object-cover" />
@@ -25,7 +28,7 @@
 </template>
 
 <script>
-import { persons } from '@/data/personData.js';
+import { persons } from '@/data/personData.json';
 
 export default {
   name: 'PersonDetailPage',
@@ -37,6 +40,11 @@ export default {
   computed: {
     imageSrc() {
       return this.person.photo || require('@/assets/placeholder.png');
+    }
+  },
+  methods: {
+    goBack() {
+      this.$router.push({ name: 'PersonenPage' });
     }
   }
 };

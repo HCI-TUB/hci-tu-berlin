@@ -11,7 +11,7 @@ import ContactPage from './views/ContactPage.vue';
 const routes = [
   { path: '/', component: AboutPage },
   { path: '/about', component: AboutPage },
-  { path: '/people', component: PersonenPage },
+  { path: '/people', name: 'PersonenPage', component: PersonenPage },
   { path: '/projects', component: ProjektePage },
   { path: '/teaching', component: LehrePage },
   { path: '/publications', component: PublicationsPage },

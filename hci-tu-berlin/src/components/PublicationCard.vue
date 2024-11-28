@@ -43,11 +43,6 @@
         type: String,
         required: false,
         default: '#'
-      },
-      bibtexLink: {
-        type: String,
-        required: false,
-        default: '#'
       }
     }
   };

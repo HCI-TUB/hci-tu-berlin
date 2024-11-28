@@ -17,7 +17,7 @@
 
 <script>
 import PersonCard from '@/components/PersonCard.vue';
-import { persons } from '@/data/personData.js';
+import { persons } from '@/data/personData.json';
 
 export default {
   name: 'PersonenPage',
@@ -31,7 +31,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-/* Additional custom styles if needed */
-</style>

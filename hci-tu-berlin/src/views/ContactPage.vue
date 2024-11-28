@@ -18,7 +18,7 @@
     </ul>
 </div>
         <div class="mt-6">
-            <StreetMap :latitude="52.51489" :longitude="13.32617" />
+            <StreetMap :latitude="52.515031" :longitude="13.326820" />
         </div>
 </div>
 </template>

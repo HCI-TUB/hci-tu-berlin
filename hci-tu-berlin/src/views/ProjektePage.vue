@@ -13,7 +13,7 @@
 
 <script>
 import Projekt from '@/components/ProjectCard.vue';
-import { research } from '@/data/researchData.js';
+import { research } from '@/data/researchData.json';
 
 export default {
   name: 'ProjektePage',
