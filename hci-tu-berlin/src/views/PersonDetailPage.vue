@@ -12,7 +12,7 @@
         <p><strong>Email:</strong> {{ person.email }}</p>
         <p><strong>Room:</strong> {{ person.room }}</p>
         <p><strong>Office Hours:</strong> {{ person.officeHours }}</p>
-        <p class="mt-4 mb-8"> {{ person.description }}</p>
+        <p class="mt-4 mb-8 text-justify"> {{ person.description }}</p>
       </div>
   
     </div>
@@ -45,6 +45,13 @@ export default {
   methods: {
     goBack() {
       this.$router.push({ name: 'PersonenPage' });
+    }
+  },
+  mounted() {
+    const fullName = this.person.name.toLowerCase().replace(/\s+/g, '-');
+    const aliasPath = `/people/${fullName}`;
+    if (this.$route.path !== aliasPath) {
+      this.$router.replace({ path: aliasPath, query: { id: this.person.id } });
     }
   }
 };
