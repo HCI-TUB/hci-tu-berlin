@@ -7,6 +7,8 @@ const sqlite3 = require("sqlite3").verbose();
 const app = express();
 const PORT = 3000;
 
+app.use(express.static('static'));
+
 // SQLite-Datenbank einrichten
 const db = new sqlite3.Database("./papers.db", (err) => {
   if (err) {
