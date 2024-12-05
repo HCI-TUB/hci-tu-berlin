@@ -29,7 +29,7 @@ export default {
   methods: {
     async fetchPapers() {
       try {
-        const response = await axios.get("http://localhost:3000/api/papers"); // Backend-API aufrufen
+        const response = await axios.get("/api/papers"); // Backend-API aufrufen
         this.papers = response.data; // Publikationen speichern
         localStorage.setItem("papers", JSON.stringify(this.papers)); // Daten in localStorage speichern
         localStorage.setItem("papersTimestamp", Date.now()); // Zeitstempel speichern

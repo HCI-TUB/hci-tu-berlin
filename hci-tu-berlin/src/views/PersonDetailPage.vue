@@ -5,7 +5,7 @@
       </button>
     <h1 class="text-3xl text-left mb-8 tracking-widest">{{ person.name }}</h1>
     <div class="flex flex-col items-start mb-4">
-      <div class="w-48 h-48 mb-4 lg:mb-0 lg:mr-4">
+      <div class="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 mb-4 lg:mb-0 lg:mr-4">
         <img :src="imageSrc" alt="Person Photo" class="w-full h-full object-cover" />
       </div>
       <div class="flex-1 mt-4">
