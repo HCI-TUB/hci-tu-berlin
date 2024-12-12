@@ -1,7 +1,9 @@
 <template>
     <div class="w-full">
-      <h1 class="text-2xl text-left my-8">Welcome to the Human-Computer Interaction Lab</h1>
+      <h1 class="text-3xl text-left my-8">Welcome to the Human-Computer Interaction Lab</h1>
+      <img class="pt-2 pb-6" src="/people/hci-team.jpeg" alt="">
       <p class="text-justify w-full text-lg">
+
  
         In the Human-Computer Interaction (HCI) Lab, led by Prof Dr Ceenu George, we explore the dynamic world of immersive virtual reality (VR) systems with the aim of improving user interaction with these technologies. Our research focusses on:
 Social acceptability: investigating the impact of head-mounted displays (HMDs) on bystanders and developing socially acceptable methods of interaction.

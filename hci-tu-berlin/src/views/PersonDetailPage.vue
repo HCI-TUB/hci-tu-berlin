@@ -5,13 +5,12 @@
       </button>
     <h1 class="text-3xl text-left mb-8 tracking-widest">{{ person.name }}</h1>
     <div class="flex flex-col items-start mb-4">
-      <div class="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 mb-4 lg:mb-0 lg:mr-4">
+      <div class="relative w-56 aspect-[3/4] sm:w-42 md:w-48 cursor-pointer">
         <img :src="imageSrc" alt="Person Photo" class="w-full h-full object-cover" />
       </div>
       <div class="flex-1 mt-4">
         <p><strong>Email:</strong> {{ person.email }}</p>
         <p><strong>Room:</strong> {{ person.room }}</p>
-        <p><strong>Office Hours:</strong> {{ person.officeHours }}</p>
         <p class="mt-4 mb-8 text-justify"> {{ person.description }}</p>
       </div>
   

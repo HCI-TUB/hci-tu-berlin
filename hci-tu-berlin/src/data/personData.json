@@ -9,7 +9,7 @@
       "address": "Einsteinufer 17, Sekr. EN-20",
       "description_short": "Professor for Human Computer Interaction at TU Berlin. HCI researcher with 9 years of industry research and 7 years of academic research experience in international institutions.",
       "description": "HCI researcher with 9 years of industry research and 7 years of academic research experience in international institutions. Proven track record of managing and delivering projects, while fostering long-lasting relationships across all stakeholders. Strong analytical skills, capability to think creatively and excellence in innovation are evident in the highly-cited research output to date.",
-      "photo": "people/ceenu.png",
+      "photo": "people/ceenu.jpg",
       "cv": [
         {
           "title": "Education",
@@ -99,7 +99,7 @@
       "address": "Einsteinufer 17, Sekr. EN-20",
       "description_short": "Research Assistant and PhD Student at TU Berlin.",
       "description": "Currently I'm primarily interested in the effective representation and communication of Cultural Heritage, particularly intangible cultural heritage, through XR environments and applications. I'm also open to topics in the fields of image processing, natural language processing and other adjacent fields.",
-      "photo": "/people/david.png",
+      "photo": "/people/david.jpg",
       "cv": [
         {
           "title": "Professional and Academic Experience",
@@ -162,27 +162,47 @@
       "room": "",
       "officeHours": "",
       "description": "",
-      "photo": "path/to/photo3.jpg",
+      "photo": "/people/rishab.jpg",
       "cv": []
     },
     {
       "id": "4",
+      "name": "Özlem Ocak",
+      "email": "ocak@tu-berlin.de",
+      "room": "EN-20",
+      "officeHours": "",
+      "description": "Secretary's office",
+      "photo": "/people/oezlem.jpg",
+      "cv": []
+    },
+    {
+      "id": "5",
       "name": "Thekla Mayer",
       "email": "t.mayer@campus.tu-berlin.de",
       "room": "",
       "officeHours": "",
       "description": "Working student at HCI Lab. B.Sc. in Computer Science",
-      "photo": "path/to/photo4.jpg",
+      "photo": "/people/thekla.jpg",
       "cv": []
     },
     {
-      "id": "5",
+      "id": "6",
       "name": "Tessa Billens",
       "email": "t.billens@campus.tu-berlin.de",
       "room": "",
       "officeHours": "",
       "description": "Working student at HCI Lab. B.Sc. in Media Computer Science",
-      "photo": "path/to/photo4.jpg",
+      "photo": "/people/tessa.jpg",
+      "cv": []
+    },
+    {
+      "id": "7",
+      "name": "Cosima Holler",
+      "email": "c.holler@campus.tu-berlin.de",
+      "room": "",
+      "officeHours": "",
+      "description": "Working student at HCI Lab. B.Sc. in Computer Science",
+      "photo": "/people/cosima.jpg",
       "cv": []
     }
   ]

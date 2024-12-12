@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-64 h-64 cursor-pointer" @click="goToDetail">
+  <div class="relative w-64 aspect-[3/4] sm:w-48 md:w-56 lg:w-64 cursor-pointer" @click="goToDetail">
     <img :src="photo" alt="" class="w-full h-full object-cover" />
     <div class="absolute inset-0 flex flex-col items-center justify-center bg-gray-800 bg-opacity-75 text-white opacity-0 hover:opacity-100 transition-opacity duration-300">
       <h3 class="text-lg font-bold">{{ name }}</h3>
