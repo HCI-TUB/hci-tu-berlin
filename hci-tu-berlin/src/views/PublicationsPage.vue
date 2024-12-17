@@ -29,7 +29,7 @@ export default {
   methods: {
     async fetchAndStorePapers() {
       try {
-        const response = await axios.get("http://localhost:3000/db/papers");
+        const response = await axios.get("/db/papers");
         console.log("DB Response:", response.data); // Log the response data
         this.papers = response.data; // Publikationen speichern
       } catch (error) {
