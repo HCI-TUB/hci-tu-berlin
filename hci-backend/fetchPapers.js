@@ -15,6 +15,8 @@ let db = new sqlite3.Database("./papers.db", (err) => {
   console.log("Connected to the papers database.");
 });
 
+app.use(express.static("static"));
+
 // Create the papers table if it doesn't exist
 db.run(`CREATE TABLE IF NOT EXISTS papers (
   id TEXT PRIMARY KEY,
