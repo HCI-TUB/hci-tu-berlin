@@ -1,108 +1,85 @@
-const express = require("express");
-const axios = require("axios");
-const cors = require("cors");
-const rateLimit = require("express-rate-limit");
-const sqlite3 = require("sqlite3").verbose();
-
+const sqlite3 = require('sqlite3').verbose();
+const axios = require('axios');
+const cron = require('node-cron');
+const express = require('express');
 const app = express();
-const PORT = 3000;
+const port = 3000;
+const cors = require('cors'); // Import cors middleware
+app.use(cors()); // Allow all origins by default
 
-app.use(express.static('static'));
 
-// SQLite-Datenbank einrichten
-const db = new sqlite3.Database("./papers.db", (err) => {
+// Create or open the database
+let db = new sqlite3.Database('./papers.db', (err) => {
   if (err) {
-    console.error("Fehler beim Öffnen der Datenbank:", err.message);
-  } else {
-    console.log("Verbunden mit der SQLite-Datenbank.");
-    db.run(`
-      CREATE TABLE IF NOT EXISTS papers (
-        paperId TEXT PRIMARY KEY,
-        title TEXT,
-        authors TEXT,
-        publicationDate TEXT,
-        venue TEXT,
-        openAccessPdf TEXT
-      )
-    `);
+    console.error(err.message);
   }
+  console.log('Connected to the papers database.');
 });
 
-// CORS aktivieren
-app.use(cors());
+// Create the papers table if it doesn't exist
+db.run(`CREATE TABLE IF NOT EXISTS papers (
+  id TEXT PRIMARY KEY,
+  title TEXT,
+  authors TEXT,
+  publicationDate TEXT,
+  venue TEXT,
+  openAccessPdf TEXT
+)`);
 
-// Rate Limiting konfigurieren
-const limiter = rateLimit({
-  windowMs: 1 * 60 * 1000, // 1 Minute
-  max: 10, // Max. 10 Anfragen pro IP
-  message: "Zu viele Anfragen, bitte später erneut versuchen.",
-});
-app.use("/api/papers", limiter);
+// Function to fetch and store papers
+async function fetchAndStorePapers() {
+    const authorIds = ["2150282068", "2267931365", "9453928"];
+  for (const authorId of authorIds) {
+    const url = `https://api.semanticscholar.org/graph/v1/author/${authorId}/papers`;
+    const fields = "title,authors,publicationDate,venue,openAccessPdf";
+    const response = await axios.get(url, { params: { fields, limit: 100 } });
+    const papers = response.data.data;
 
-// Publikationen abrufen und speichern
-app.get("/api/papers", async (req, res) => {
-  const authorIds = ["2150282068", "2267931365", "9453928"]; // Beispiel-IDs
-  let allPapers = [];
-
-  try {
-    // API-Aufruf für jede ID
-    for (const authorId of authorIds) {
-      const url = `https://api.semanticscholar.org/graph/v1/author/${authorId}/papers`;
-      const fields = "title,authors,publicationDate,venue,openAccessPdf";
-      const response = await axios.get(url, { params: { fields, limit: 100 } });
-      allPapers.push(...response.data.data);
-    }
-
-    // Duplikate entfernen
-    allPapers = allPapers.filter(
-      (paper, index, self) =>
-        index === self.findIndex((p) => p.paperId === paper.paperId)
-    );
-
-    // Daten in SQLite speichern
-    const insertStmt = db.prepare(`
-      INSERT OR REPLACE INTO papers (paperId, title, authors, publicationDate, venue, openAccessPdf)
-      VALUES (?, ?, ?, ?, ?, ?)
-    `);
-
-    allPapers.forEach((paper) => {
-      insertStmt.run(
-        paper.paperId,
-        paper.title,
-        JSON.stringify(paper.authors),
-        paper.publicationDate || null,
-        paper.venue || null,
-        paper.openAccessPdf?.url || null
+    for (const paper of papers) {
+      db.run(`INSERT OR IGNORE INTO papers (id, title, authors, publicationDate, venue, openAccessPdf) VALUES (?, ?, ?, ?, ?, ?)`, 
+        [paper.paperId, paper.title, JSON.stringify(paper.authors), paper.publicationDate, paper.venue, paper.openAccessPdf?.url], 
+        (err) => {
+          if (err) {
+            console.error(err.message);
+          }
+        }
       );
-    });
-
-    insertStmt.finalize();
-
-    res.json(allPapers);
-  } catch (error) {
-    console.error("Fehler beim Abrufen der Publikationen:", error.message);
-
-    // Fallback: Daten aus SQLite lesen
-    db.all("SELECT * FROM papers", [], (err, rows) => {
+    }
+  }
+}
+function logPapersData() {
+    const sql = `SELECT * FROM papers`;
+    db.all(sql, [], (err, rows) => {
       if (err) {
-        console.error("Fehler beim Lesen aus der Datenbank:", err.message);
-        res.status(500).json({ error: "Fehler beim Abrufen der Daten" });
-      } else {
-        const papers = rows.map((row) => ({
-          paperId: row.paperId,
-          title: row.title,
-          authors: JSON.parse(row.authors),
-          publicationDate: row.publicationDate,
-          venue: row.venue,
-          openAccessPdf: { url: row.openAccessPdf },
-        }));
-        res.json(papers);
+        console.error(err.message);
+        return;
       }
+      console.log('Current data in papers table:', rows);
     });
   }
+
+// Schedule the task to run once a day
+cron.schedule('0 0 * * *', () => {
+  fetchAndStorePapers();
 });
 
-// Server starten
-app.listen(PORT, () => {
-  console.log(`Server läuft auf http://localhost:${PORT}`);
+fetchAndStorePapers().then(() => {
+  logPapersData(); // Log the data after the initial fetch and store
+});
+
+// Endpoint to fetch papers from the database
+app.get('/db/papers', (req, res) => {
+  const sql = `SELECT * FROM papers`;
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      res.status(400).json({ error: err.message });
+      return;
+    }
+    res.json(rows);
+  });
+});
+
+// Start the Express server
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
 });
