@@ -1,0 +1,21 @@
+name: Build & Deploy
+on:
+  push:
+    tags:
+      - 'v1.*.0'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+          - uses: actions/download-artifact@v2
+            with:
+              name: build
+              path: build
+          - name: Create SSH key
+            run: |
+              install -m 600 -D /dev/null ~/.ssh/id_rsa
+              echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+              echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          - name: Trigger update on production server
+            run: |
+              ssh root@159.69.247.202 "/bin/bash /node_apps/hci-tu-berlin/rebuildSite.sh"
