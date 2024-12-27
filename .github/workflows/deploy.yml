@@ -1,8 +1,8 @@
 name: Build & Deploy
 on:
   push:
-    tags:
-      - 'v1.*.0'
+    branches:
+      - master
 jobs:
   deploy:
     runs-on: ubuntu-latest
