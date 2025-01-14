@@ -15,3 +15,6 @@ jobs:
           - name: Trigger update on production server
             run: |
               ssh root@159.69.247.202 "/bin/bash /node_apps/hci-tu-berlin/rebuildSite.sh"
+          - name: Check if website is up
+            run: |
+              curl --output /dev/null --silent --head --fail hci.fuhry.me
