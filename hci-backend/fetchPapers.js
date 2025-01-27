@@ -5,6 +5,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const cors = require("cors"); // Import cors middleware
+
 app.use(cors()); // Allow all origins by default (TODO: Probably want to drop this before deploying to prod)
 
 // Create or open the database
@@ -63,7 +64,7 @@ function logPapersData() {
       console.error(err.message);
       return;
     }
-    console.log("Current data in papers table:", rows);
+    // console.log("Current data in papers table:", rows);
   });
 }
 
