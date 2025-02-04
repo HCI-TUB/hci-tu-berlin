@@ -6,11 +6,11 @@ git fetch
 git reset --hard origin/main
 git pull
 
-pnpm install --force
+/home/ubuntu/.local/share/pnpm/pnpm install --force
 
 cd /home/ubuntu/webpage/hci-tu-berlin
 
-pnpm install --force
-pnpm run build --emptyOutDir
+/home/ubuntu/.local/share/pnpm/pnpm install --force
+/home/ubuntu/.local/share/pnpm/pnpm run build --emptyOutDir
 
 sudo service hci restart
