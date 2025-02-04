@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+# Do we **actually** need to source .zshrc?
+
 cd /home/ubuntu/webpage/
 
 git fetch
