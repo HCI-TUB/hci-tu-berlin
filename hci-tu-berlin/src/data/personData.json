@@ -158,9 +158,10 @@
     {
       "id": "3",
       "name": "Rishab Bhattacharyya",
-      "email": "r.bhattacharyya@tu-berlin.de",
-      "room": "",
-      "officeHours": "",
+      "email": "rishab.bhattacharyya@tu-berlin.de",
+      "room": "EN-357",
+      "officeHours": "Tuesdays 14:00-16:00 and on appointment",
+      "address": "Einsteinufer 17, Sekr. EN-20",
       "description": "",
       "photo": "/people/rishab.jpg",
       "cv": []
@@ -169,7 +170,7 @@
       "id": "4",
       "name": "Özlem Ocak",
       "email": "ocak@tu-berlin.de",
-      "room": "EN-20",
+      "room": "EN-358",
       "officeHours": "",
       "description": "Secretary's office",
       "photo": "/people/oezlem.jpg",

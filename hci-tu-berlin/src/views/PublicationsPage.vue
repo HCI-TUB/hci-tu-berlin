@@ -38,7 +38,7 @@ export default {
     },
     formatAuthors(authors) {
       const authorsArray = JSON.parse(authors);
-      return authorsArray.map(author => author.name).join(", ");
+      return authorsArray.map((author) => author.name).join(", ");
     },
   },
   mounted() {

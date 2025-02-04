@@ -1,6 +1,8 @@
-#!/bin/bash
+#!/bin/zsh
 
-cd /node_apps/hci-tu-berlin/
+source ~/.zshrc
+
+cd /home/ubuntu/webpage/
 
 git fetch
 git reset --hard origin/main
@@ -8,9 +10,9 @@ git pull
 
 pnpm install --force
 
-cd /node_apps/hci-tu-berlin/hci-tu-berlin
+cd /home/ubuntu/webpage/hci-tu-berlin
 
 pnpm install --force
 pnpm run build --emptyOutDir
 
-service hci restart
+sudo service hci restart
