@@ -1,4 +1,4 @@
-#deploy file
+# maybe this works now?
 name: Build & Deploy
 on:
   push:
