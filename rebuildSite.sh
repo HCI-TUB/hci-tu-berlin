@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# Do we **actually** need to source .zshrc?
+source ~/.zshrc
 
 cd /home/ubuntu/webpage/
 
