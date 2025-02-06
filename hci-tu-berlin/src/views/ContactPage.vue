@@ -3,20 +3,49 @@
     <h1 class="text-3xl text-left mb-8 tracking-widest">Contact</h1>
 
     <div>
-      <h2 class="text-2xl text-left tracking-widest my-4">
-        Contact Information
-      </h2>
       <ul class="list-none text-left">
+        <li>
+          <h4 class="text-2xl text-left tracking-widest mb-2">Secretary</h4>
+        </li>
         <li>Özlem Ocak</li>
-        <li>ocak@tu-berlin.de</li>
-        <li>EN 12, Room E-N 446</li>
+        <li>
+          <a
+            class="text-custom-red hover:text-custom-red-dark"
+            href="mailto:ocak@tu-berlin.de"
+            >ocak@tu-berlin.de</a
+          >
+        </li>
       </ul>
     </div>
 
-    <div>
-      <h2 class="text-2xl text-left tracking-widest mt-6 mb-4">
-        Mailing Address
-      </h2>
+    <div class="mt-6">
+      <ul class="list-none text-left">
+        <li>
+          <h4 class="text-2xl text-left tracking-widest mb-2">Applications</h4>
+        </li>
+        <li>
+          Please send inquiries and applications to
+          <a
+            class="text-custom-red hover:text-custom-red-dark"
+            href="mailto:admin@hci.tu-berlin.de"
+            >admin@hci.tu-berlin.de</a
+          >.
+        </li>
+        <li class="mt-2">
+          For a virtual consultation hour with Prof. George, sign up
+          <a
+            class="text-custom-red hover:text-custom-red-dark"
+            href="https://isis.tu-berlin.de/course/view.php?id=41699"
+            target="_blank"
+            rel="noopener noreferrer"
+            >here</a
+          >.
+        </li>
+      </ul>
+    </div>
+
+    <div class="mt-6">
+      <h4 class="text-2xl text-left tracking-widest mb-2">Mailing Address</h4>
       <ul class="list-none text-left">
         <li>Einsteinufer 17, 10587 Berlin</li>
       </ul>
