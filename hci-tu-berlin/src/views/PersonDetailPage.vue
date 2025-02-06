@@ -16,7 +16,7 @@
         <p class="mt-4 mb-8 text-justify">{{ person.description }}</p>
       </div>
     </div>
-    <div v-for="(section, index) in person.cv" :key="index" class="mb-4">
+    <div v-for="(section, index) in person.cv" :key="index" class="mb-8">
       <h2 class="text-2xl tracking-widest my-4">{{ section.title }}</h2>
       <ul class="list-disc list-inside text-lg">
         <li
@@ -24,7 +24,8 @@
           v-for="(item, itemIndex) in section.items"
           :key="itemIndex"
         >
-          {{ item.year }}, {{ item.title }}
+          <i>{{ item.year }}</i
+          >, {{ item.title }}
         </li>
       </ul>
     </div>

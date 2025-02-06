@@ -16,18 +16,15 @@
           "items": [
             {
               "year": "2016-2020",
-              "title": "Ludwig-Maximilians-Universität München, DE",
-              "description": "Dr.rer.nat, \"Virtual Reality Interfaces for Seamless Interaction with the Physical Reality\""
+              "title": "Dr.rer.nat, Virtual Reality Interfaces for Seamless Interaction with the Physical Reality, LMU München, DE"
             },
             {
               "year": "2010-2012",
-              "title": "University of Sussex, UK",
-              "description": "M.Sc Human Centred Computer Systems"
+              "title": "M.Sc Human Centred Computer Systems, University of Sussex, UK"
             },
             {
-              "year": "July 2011- Aug. 2011",
-              "title": "University of Bath, UK",
-              "description": "B.Sc. Computer Science with Business"
+              "year": "2006-2010",
+              "title": "B.Sc. Computer Science with Business, University of Bath, UK"
             }
           ]
         },
@@ -41,47 +38,47 @@
             },
             {
               "year": "Sep. 2022 - Nov. 2023",
-              "title": "Senior Researcher",
+              "title": "Senior Researcher, Google Munich, Usable Security and Privacy Research",
               "description": "Google Munich, Usable Security and Privacy Research"
             },
             {
               "year": "Sep. 2021 - Sep. 2022",
-              "title": "Visiting Professor (W3)(part-time, 50%)",
+              "title": "Visiting Professor, University of Augsburg, Human-Centered Artificial Intelligence",
               "description": "University of Augsburg, Human-Centered Artificial Intelligence (Prof.Dr. Elisabeth André)"
             },
             {
               "year": "Sep. 2020 - Aug. 2021",
-              "title": "Post-doctoral Researcher",
+              "title": "Post-doctoral Researcher, LMU München",
               "description": "Ludwig-Maximilians-Universität München, DE - Media Informatics Group (Prof. Dr. Heinrich Hußmann)"
             },
             {
               "year": "Apr. 2016 - Sep. 2020",
-              "title": "Researcher",
+              "title": "Researcher, LMU München",
               "description": "Ludwig-Maximilians-Universität München, DE - Media Informatics Group (Prof. Dr. Heinrich Hußmann). Maternity leave: September 2017 – August 2018"
             },
             {
               "year": "Jul. 2013 - Feb. 2016",
-              "title": "Senior Digital Product Manager",
+              "title": "Senior Digital Product Manager, PAYBACK – American Express",
               "description": "PAYBACK – American Express, Munich, DE. Maternity leave: March 2015 – February 2016"
             },
             {
               "year": "Nov. 2011 - Apr. 2013",
-              "title": "Digital Product Manager/UXR Lead",
+              "title": "Digital Product Manager/UXR Lead, American Express, London, UK",
               "description": "American Express, London, UK"
             },
             {
               "year": "Sep. 2010 - Nov. 2011",
-              "title": "User Experience Researcher",
+              "title": "User Experience Researcher, American Express, London & Brighton, UK",
               "description": "American Express, London & Brighton, UK"
             },
             {
               "year": "June 2009 - Aug. 2009",
-              "title": "Analyst",
+              "title": "Analyst, UNODC – United Nations, Vienna, AUT",
               "description": "UNODC – United Nations, Vienna, AUT"
             },
             {
               "year": "June 2008 - June 2009",
-              "title": "Developer",
+              "title": "Developer, Goldman Sachs, London, UK",
               "description": "Goldman Sachs, London, UK"
             }
           ]
