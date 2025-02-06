@@ -162,7 +162,7 @@
       "room": "EN-357",
       "officeHours": "Tuesdays 14:00-16:00 and on appointment",
       "address": "Einsteinufer 17, Sekr. EN-20",
-      "description": "",
+      "description": "My research focuses on understanding and preserving spatial knowledge acquisition within indoor navigation systems. I am particularly interested in the cognitive aspects of navigation and in designing technology that supports and enhances these cognitive processes, from an HCI perspective. The widespread adoption of route-guided navigation systems, such as GPS-based navigation, has led to a gradual decline in human spatial awareness. This issue is often overlooked by the developers of navigation technologies. My research addresses this gap by exploring two key areas: human cognition in navigation and the development of technology that preserves and supports cognitive processes. On the cognitive side, I investigate how humans acquire spatial knowledge in different environments, theorizing spatial knowledge acquisition through landmarks in indoor spaces and examining the intrinsic cognitive differences between indoor and outdoor navigation. From a technological perspective, I focus on developing precise localization methods for indoor navigation, utilizing both head-mounted displays (HMDs) and smartphones. I also explore the role of different modalities in navigation, including audio, speech, and haptics, as well as the visual, auditory, and haptic representation of landmarks to support spatial awareness.",
       "photo": "/people/rishab.jpg",
       "cv": []
     },
