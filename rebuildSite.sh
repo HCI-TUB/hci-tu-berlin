@@ -4,8 +4,6 @@ SCRIPT_DIR=${0:a:h}
 
 source ~/.zshrc
 
-echo $SCRIPT_DIR
-
 cd $SCRIPT_DIR
 
 git fetch
