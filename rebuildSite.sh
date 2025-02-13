@@ -10,7 +10,7 @@ git pull
 
 pnpm install --force
 
-cd "$SCRIPT_DIR/hci-tu-backend"
+cd "$SCRIPT_DIR/hci-backend"
 
 pnpm install --force
 pnpm run build --emptyOutDir
