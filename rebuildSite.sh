@@ -1,8 +1,10 @@
-#!/bin/bash
+#!/bin/zsh
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+SCRIPT_DIR=${0:a:h}
 
-source ~/.bashrc
+source ~/.zshrc
+
+echo $SCRIPT_DIR
 
 cd $SCRIPT_DIR
 
