@@ -1,8 +1,8 @@
 #!/bin/zsh
 
-source ~/.zshrc
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-cd /home/ubuntu/webpage/
+cd $SCRIPT_DIR
 
 git fetch
 git reset --hard origin/main
@@ -10,7 +10,7 @@ git pull
 
 pnpm install --force
 
-cd /home/ubuntu/webpage/hci-tu-berlin
+cd "$SCRIPT_DIR/hci-tu-backend"
 
 pnpm install --force
 pnpm run build --emptyOutDir
