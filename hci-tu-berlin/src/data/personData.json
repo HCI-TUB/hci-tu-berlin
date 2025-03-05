@@ -8,81 +8,10 @@
       "officeHours": "",
       "address": "Einsteinufer 17, Sekr. EN-20",
       "description_short": "Professor for Human Computer Interaction at TU Berlin. HCI researcher with 9 years of industry research and 7 years of academic research experience in international institutions.",
-      "description": "HCI researcher with 9 years of industry research and 7 years of academic research experience in international institutions. Proven track record of managing and delivering projects, while fostering long-lasting relationships across all stakeholders. Strong analytical skills, capability to think creatively and excellence in innovation are evident in the highly-cited research output to date.",
+      "description": "Ceenu George is a Professor at the Technical University of Berlin, where she leads the Chair for Human-Computer Interaction. From 2021 to 2023, she was a Senior Researcher at Google Munich, working in the Trust and Safety Research team. During this time, she also held a Visiting Professorship for Human-Centered Artificial Intelligence at the University of Augsburg from September 2021 to September 2022. She completed her PhD (Dr. rer. nat.) at LMU Munich in 2020, focusing on Virtual Reality Interfaces for Seamless Interaction with the Physical Reality. Following her PhD, she worked as a Post-doctoral Researcher at LMU Munich. Before entering academia, she gained extensive industry experience as a Senior Digital Product Manager at PAYBACK – American Express, and in various roles as Digital Product Manager and UX Research Lead at American Express in London. She also held research and development positions at Goldman Sachs in London and at the United Nations Office on Drugs and Crime in Vienna. She holds an M.Sc. in Human-Centred Computer Systems from the University of Sussex and a B.Sc. in Computer Science with Business from the University of Bath.",
       "photo": "people/ceenu.jpg",
       "cv": [
-        {
-          "title": "Education",
-          "items": [
-            {
-              "year": "2016-2020",
-              "title": "Dr.rer.nat, Virtual Reality Interfaces for Seamless Interaction with the Physical Reality, LMU München, DE"
-            },
-            {
-              "year": "2010-2012",
-              "title": "M.Sc Human Centred Computer Systems, University of Sussex, UK"
-            },
-            {
-              "year": "2006-2010",
-              "title": "B.Sc. Computer Science with Business, University of Bath, UK"
-            }
-          ]
-        },
-        {
-          "title": "Experience",
-          "items": [
-            {
-              "year": "Since Nov 2023",
-              "title": "Professor for Human Computer Interaction (TT W3) at TU Berlin",
-              "description": "Establishing and leading the Human Computer Interaction lab at the Electrical Eng. and Comp. Science faculty"
-            },
-            {
-              "year": "Sep. 2022 - Nov. 2023",
-              "title": "Senior Researcher, Google Munich, Usable Security and Privacy Research",
-              "description": "Google Munich, Usable Security and Privacy Research"
-            },
-            {
-              "year": "Sep. 2021 - Sep. 2022",
-              "title": "Visiting Professor, University of Augsburg, Human-Centered Artificial Intelligence",
-              "description": "University of Augsburg, Human-Centered Artificial Intelligence (Prof.Dr. Elisabeth André)"
-            },
-            {
-              "year": "Sep. 2020 - Aug. 2021",
-              "title": "Post-doctoral Researcher, LMU München",
-              "description": "Ludwig-Maximilians-Universität München, DE - Media Informatics Group (Prof. Dr. Heinrich Hußmann)"
-            },
-            {
-              "year": "Apr. 2016 - Sep. 2020",
-              "title": "Researcher, LMU München",
-              "description": "Ludwig-Maximilians-Universität München, DE - Media Informatics Group (Prof. Dr. Heinrich Hußmann). Maternity leave: September 2017 – August 2018"
-            },
-            {
-              "year": "Jul. 2013 - Feb. 2016",
-              "title": "Senior Digital Product Manager, PAYBACK – American Express",
-              "description": "PAYBACK – American Express, Munich, DE. Maternity leave: March 2015 – February 2016"
-            },
-            {
-              "year": "Nov. 2011 - Apr. 2013",
-              "title": "Digital Product Manager/UXR Lead, American Express, London, UK",
-              "description": "American Express, London, UK"
-            },
-            {
-              "year": "Sep. 2010 - Nov. 2011",
-              "title": "User Experience Researcher, American Express, London & Brighton, UK",
-              "description": "American Express, London & Brighton, UK"
-            },
-            {
-              "year": "June 2009 - Aug. 2009",
-              "title": "Analyst, UNODC – United Nations, Vienna, AUT",
-              "description": "UNODC – United Nations, Vienna, AUT"
-            },
-            {
-              "year": "June 2008 - June 2009",
-              "title": "Developer, Goldman Sachs, London, UK",
-              "description": "Goldman Sachs, London, UK"
-            }
-          ]
-        }
+        
       ],
       "research_projects": [],
       "publications": []
