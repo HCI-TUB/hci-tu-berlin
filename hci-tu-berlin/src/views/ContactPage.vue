@@ -54,6 +54,18 @@
       <StreetMap :latitude="52.515031" :longitude="13.32682" />
     </div>
   </div>
+
+  <div class="flex items-center">
+    <img class="w-8 mr-2" src="/assets/hci-logo.jpg" alt="hci logo" />
+    <p class="text-justify text-lg my-2">
+      <a
+        class="hover:text-custom-red"
+        href="https://www.instagram.com/hci_tuberlin/"
+        target="_blank"
+        >Follow us on Instagram</a
+      >
+    </p>
+  </div>
 </template>
 
 <script>

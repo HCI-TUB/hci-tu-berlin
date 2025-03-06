@@ -1,7 +1,17 @@
 {
   "research": [
     {
-     
+     "title": "Indoor Navigation",
+     "text": "",
+     "media" : [{
+        "type": "video",
+        "src": "/assets/Navigation1.mp4",
+        "alt": "Indoor Navigation"
+     }, {
+        "type": "video",
+        "src": "/assets/Navigation2.mp4",
+        "alt": "Indoor Navigation"
+     }]
     }
   ]
 }

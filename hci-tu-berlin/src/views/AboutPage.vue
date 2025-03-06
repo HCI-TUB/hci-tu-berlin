@@ -17,11 +17,23 @@
       technologies more accessible, secure and user-friendly for everyday
       applications.
       <br /><br />
-      <router-link to="/contact" class="text-custom-red"
+      <router-link to="/contact" class="hover:text-custom-red"
         >Contact us</router-link
       >
       if you would like to join us or exchange ideas!
     </p>
+    <hr class="mt-4" />
+    <div class="flex items-center mt-4">
+      <img class="w-8 mr-2" src="/assets/hci-logo.jpg" alt="hci logo" />
+      <p class="text-justify text-lg my-2">
+        <a
+          class="hover:text-custom-red"
+          href="https://www.instagram.com/hci_tuberlin/"
+          target="_blank"
+          >Follow us on Instagram</a
+        >
+      </p>
+    </div>
     <hr class="my-4" />
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <img
@@ -36,9 +48,7 @@
           page, which all interested parties can attend. As long as there is no
           date, we have no availability for bachelor theses. For master theses:
           Write an email to
-          <a
-            class="text-custom-red hover:text-custom-red-dark"
-            href="mailto:admin@hci.tu-berlin.de"
+          <a class="hover:text-custom-red" href="mailto:admin@hci.tu-berlin.de"
             >admin@hci.tu-berlin.de</a
           >.
         </p>
@@ -54,9 +64,6 @@ export default {
 </script>
 
 <style>
-.text-custom-red {
-  color: #c50e1f;
-}
 .hover\:text-custom-red:hover {
   color: #c50e1f;
 }
