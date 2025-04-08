@@ -106,7 +106,7 @@
           :key="index"
           class="py-2"
         >
-          <b>{{ bullet.title }}: </b>{{ bullet.content }}
+          {{ bullet.title }}
         </li>
       </ul>
     </div>
@@ -142,8 +142,7 @@
           class="py-2"
         >
           <p class="text-justify">
-            <b>{{ organizer.name }}</b
-            >{{ organizer.description }}
+            <b>{{ organizer.name }}</b> {{ organizer.description }}
           </p>
         </li>
       </ul>

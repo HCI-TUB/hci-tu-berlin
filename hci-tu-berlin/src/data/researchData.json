@@ -35,7 +35,7 @@
 
 },
 "workshopGoals": {
-  "text": "Building on prior work in HCI field research [7], this workshop moves beyond conceptual debates to focus on practical strategies for integrating field studies in the future of collaborative work in hybrid spaces.",
+  "text": "Building on prior work in HCI field research, this workshop moves beyond conceptual debates to focus on practical strategies for integrating field studies in the future of collaborative work in hybrid spaces.",
   "bullets": [
     {
       "title": "Assess the current state of field research in HCI with the workshop participants",
@@ -55,32 +55,58 @@
     }
   ]
 },
-  "organizers": [
+"organizers": [
   {
     "name": "Ceenu George",
     "affiliation": "Technical University of Berlin",
-    "description": " is a TT professor of Human-Computer Interaction at the Technical University of Berlin. Her research explores the intersection of HCI, extended reality (XR), and explainable AI (XAI), with a focus on collaborative interactions in hybrid environments. She has organized workshops at leading conferences and actively contributes to the HCI/XR community. Her work has been published in top-tier venues, addressing user experience, adaptive interfaces, and participatory design methods."
+    "description": "is a TT professor of Human-Computer Interaction at the Technical University of Berlin. Her research explores the intersection of HCI, extended reality (XR), and explainable AI (XAI), with a focus on collaborative interactions in hybrid environments. She has organized workshops at leading conferences and actively contributes to the HCI/XR community. Her work has been published in top-tier venues, addressing user experience, adaptive interfaces, and participatory design methods."
+  },
+  {
+    "name": "Franziska Günther",
+    "affiliation": "Technical University of Berlin / TU Dortmund University",
+    "description": "is an ethnologist specializing in psychological anthropology. She is a research associate at TU Berlin and a doctoral candidate at TU Dortmund University. Her research focuses on the perspectives of individuals with lived experience at the intersection of peer support and professional participation. Using qualitative research methods, she explores the experiences and challenges faced by people with mental health conditions."
+  },
+  {
+    "name": "Jana-Sophie Effert",
+    "affiliation": "TU Dortmund University",
+    "description": "is a research assistant and doctoral candidate at the Department of Work, Inclusion and Technology at TU Dortmund University. With a background in psychology and a focus on human factors, she is currently working primarily on the human-centered design of inclusive work systems. The focus is on the integration of people with disabilities in the development process of work software."
   },
   {
     "name": "Eva Wiese",
     "affiliation": "Technical University of Berlin",
-    "description": " is a full professor of Experimental Psychology and Social Neuroscience at the Technical University of Berlin. Her research examines cognitive, behavioral and affective processes underlying social interactions between humans and artificial agents, such as robots or AI. She uses neural and behavioral measures in combination with dynamic interaction protocols that allow participants to engage in realistic social interactions with artificial agents and investigates how the brain responds to their social input."
+    "description": "is a full professor of Experimental Psychology and Social Neuroscience at the Technical University of Berlin. Her research examines cognitive, behavioral and affective processes underlying social interactions between humans and artificial agents, such as robots or AI. She uses neural and behavioral measures in combination with dynamic interaction protocols that allow participants to engage in realistic social interactions with artificial agents and investigates how the brain responds to their social input."
   },
   {
     "name": "Sebastian Möller",
     "affiliation": "Technical University of Berlin / German Research Center for Artificial Intelligence (DFKI)",
-    "description": " is a full professor for Quality and Usability at the Faculty for EE and CS of Technische Universität Berlin, and a Scientific Director at the German Research Center for Artificial Intelligence (DFKI). His focus is on the evaluation of Quality of Experience and User Experience, as well as on speech-based and text-based interfaces, mostly relying on large foundation models. He has contributed to VR/XR interfaces, and has founded the Berlin XR Lab."
+    "description": "is a full professor for Quality and Usability at the Faculty for EE and CS of Technische Universität Berlin, and a Scientific Director at the German Research Center for Artificial Intelligence (DFKI). His focus is on the evaluation of Quality of Experience and User Experience, as well as on speech-based and text-based interfaces, mostly relying on large foundation models. He has contributed to VR/XR interfaces, and has founded the Berlin XR Lab."
+  },
+  {
+    "name": "Veronica Hoth",
+    "affiliation": "TU Chemnitz / TU Berlin",
+    "description": "is a designer, research assistant at TU Chemnitz, and a doctoral candidate at TU Berlin. Her work focuses on user experience and human-centered design. She conducts research on design ethics to integrate value-oriented design into the human-centered design process through co-design workshops. Her focus lies in considering privacy and diversity in HCI design."
   },
   {
     "name": "Falko Dressler",
     "affiliation": "Technical University of Berlin",
-    "description": " is a full professor for Telecommunication Networks at the School of Electrical Engineering and Computer Science, TU Berlin. His research objectives include next generation wireless communication systems in combination with distributed machine learning and edge computing for improved resiliency. Application domains include the internet of things, cyber-physical systems, and the internet of bio-nano-things."
+    "description": "is a full professor for Telecommunication Networks at the School of Electrical Engineering and Computer Science, TU Berlin. His research objectives include next generation wireless communication systems in combination with distributed machine learning and edge computing for improved resiliency. Application domains include the internet of things, cyber-physical systems, and the internet of bio-nano-things."
+  },
+  {
+    "name": "Stefan Brandenburg",
+    "affiliation": "Chemnitz University of Technology",
+    "description": "is Professor of General Psychology and Human Factors at Chemnitz University of Technology. His work focuses on the methods and explanatory models of human experience and behavior in relation to their interaction with technologies as well as the ethical aspects of the use and development of hybrid work and collaboration of new technologies."
+  },
+  {
+    "name": "Frauke Mörike",
+    "affiliation": "TU Dortmund University",
+    "description": "heads the Department of Work, Inclusion and Technology at TU Dortmund University. As an ethnologist and business information scientist with many years of practical experience in multinational companies, her research interest is the design of inclusive socio-technical work systems with a special focus on the production conditions of software and the opportunities/risks of new forms of work for participation in work."
   },
   {
     "name": "Moritz Queisner",
     "affiliation": "Charité – Universitätsmedizin Berlin",
-    "description": " is a professor in the field of digital health at the Department of Surgery at Charité – Universitätsmedizin Berlin. He is an expert in health technologies with a focus on future applications, technology assessment, knowledge transfer, and design principles in surgery. Moritz has an academic background in media studies, science and technology studies and digital health. His research explores mixed and virtual reality, imaging technologies and 3D/4D simulation in surgery."
-  }],
+    "description": "is a professor in the field of digital health at the Department of Surgery at Charité – Universitätsmedizin Berlin. He is an expert in health technologies with a focus on future applications, technology assessment, knowledge transfer, and design principles in surgery. Moritz has an academic background in media studies, science and technology studies and digital health. His research explores mixed and virtual reality, imaging technologies and 3D/4D simulation in surgery."
+  }
+],
   "topicsOfInterest": {
   "text": "Rather than addressing these barriers in isolation, we organize discussions around three key themes that are central to advancing field studies in HCI:",
   "bullets": [
