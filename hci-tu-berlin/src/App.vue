@@ -47,7 +47,7 @@
 
     <main class="w-full px-4 md:px-0">
       <div
-        class="flex flex-col gap-8 w-full sm:w-[40rem] md:w-[50rem] md:my-12 mb-12"
+        class="flex flex-col gap-8 w-full sm:w-[50rem] md:w-[55rem] lg:w-[60rem] md:my-12 mb-12"
       >
         <router-view />
       </div>
