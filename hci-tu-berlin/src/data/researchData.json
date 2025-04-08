@@ -24,11 +24,11 @@
   "text": "We invite researchers, practitioners, and academics from diverse sectors to participate in our workshop on field studies with emerging technologies in collaborative, hybrid spaces. The workshop will focus on methodologies, challenges, regulatory considerations, and future applications in this domain. We aim to foster discussions and networking opportunities among experts and newcomers alike.",
   "bullets": [
     "Deadline: TBD.",
-    "Format: Position paper of 1 to 2 pages in the ACM two-column template using the Overleaf template).",
-    "Topics: submit position papers (1–2 pages) following the ACM two-column template ADD LINK. Papers should address field study experiences, methodologies, emerging technologies, regulatory considerations, or propose concepts for future applications.",
+    "Format: Position paper of 1 to 2 pages in the ACM two-column template using the <span style=\"color:#740712\"><a href='https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc' target='_blank' >Overleaf template.</a></span>",
+    "Topics: Papers should address field study experiences, methodologies, emerging technologies, regulatory considerations, or propose concepts for future applications.",
     "All submissions must include author information",
-    "Please submit your position paper through <a href='https://www.conftool.com/muc2025/' target='_blank' class='text-red-500 hover:text-red-700'>ConfTool</a>.",
-    "Submissions will be reviewed by workshop organizers and fellow participants. Accepted submissions will be included in the GI Digital Library.",
+    "Please submit your position paper through <span style=\"color:#740712\"><a href='https://www.conftool.com/muc2025/' target='_blank'>ConfTool</a></span>.",
+    "Submissions will be reviewed by workshop organizers and fellow participants. Accepted submissions will be included in the <span style=\"color:#740712\"><a href='https://dl.gi.de/' target='_blank'>GI Digital Library</a></span>.",
     "At least one author of each accepted submission must attend in person and register for at least one day of the conference.",
     "Six selected submissions will be presented in the form of lightning talks (5 mins each) with subsequent discussion (5 mins each). All other accepted submissions will be presented in the form of posters."
   ]
@@ -37,10 +37,22 @@
 "workshopGoals": {
   "text": "Building on prior work in HCI field research [7], this workshop moves beyond conceptual debates to focus on practical strategies for integrating field studies in the future of collaborative work in hybrid spaces.",
   "bullets": [
-    "Assess the current state of field research in HCI with the workshop participants – particularly within Germany and the EU. Based on their experience and the case studies that they have submitted, participants will review the scope, frequency, and impact of field studies while identifying the methodological, regulatory, and funding constraints that have hindered their adoption.",
-    "Identify methodological advances that facilitate efficient field studies. Participants will exchange insights on effective tools, study designs, and workflows that enable a transition from controlled experiments to real-world deployments. Kjeldskov et al.[7] discuss that the HCI community needs to find ways to move earlier into the field. We want to build upon their discussion and explore within this workshop how far we have come and more critically reflect on why the move to the field is happening slower than we envision at the start of projects. We are specifically interested in case studies from practitioners and researchers that failed or required multiple rounds of improvements. However, the discussion will also include examples of successful field research methodologies [6], as well as strategies for balancing scientific rigor with real-world constraints [11].",
-    "Explore best practices for regulatory compliance and data-sharing. The discussion will focus on strategies for navigating legal and ethical requirements in field studies, particularly under the Forschungsdatenschutzgesetz/research data regulations [2]. Additionally, the workshop will examine how universities and research institutions can support standardized, legally compliant data collection and sharing early in the project in a timely manner.",
-    "Address structural barriers in publishing and funding that discourage field studies. Participants will discuss how HCI publishing norms favor lab-based research, limiting incentives for longitudinal, real-world studies. This discussion will explore how we can address this as a community."
+    {
+      "title": "Assess the current state of field research in HCI with the workshop participants",
+      "content": "Particularly within Germany and the EU. Based on their experience and the case studies that they have submitted, participants will review the scope, frequency, and impact of field studies while identifying the methodological, regulatory, and funding constraints that have hindered their adoption."
+    },
+    {
+      "title": "Identify methodological advances that facilitate efficient field studies",
+      "content": "Participants will exchange insights on effective tools, study designs, and workflows that enable a transition from controlled experiments to real-world deployments. Kjeldskov et al.[7] discuss that the HCI community needs to find ways to move earlier into the field. We want to build upon their discussion and explore within this workshop how far we have come and more critically reflect on why the move to the field is happening slower than we envision at the start of projects. We are specifically interested in case studies from practitioners and researchers that failed or required multiple rounds of improvements. However, the discussion will also include examples of successful field research methodologies [6], as well as strategies for balancing scientific rigor with real-world constraints [11]."
+    },
+    {
+      "title": "Explore best practices for regulatory compliance and data-sharing",
+      "content": "The discussion will focus on strategies for navigating legal and ethical requirements in field studies, particularly under the Forschungsdatenschutzgesetz/research data regulations [2]. Additionally, the workshop will examine how universities and research institutions can support standardized, legally compliant data collection and sharing early in the project in a timely manner."
+    },
+    {
+      "title": "Address structural barriers in publishing and funding that discourage field studies",
+      "content": "Participants will discuss how HCI publishing norms favor lab-based research, limiting incentives for longitudinal, real-world studies. This discussion will explore how we can address this as a community."
+    }
   ]
 },
   "organizers": [
@@ -68,8 +80,24 @@
     "name": "Moritz Queisner",
     "affiliation": "Charité – Universitätsmedizin Berlin",
     "description": " is a professor in the field of digital health at the Department of Surgery at Charité – Universitätsmedizin Berlin. He is an expert in health technologies with a focus on future applications, technology assessment, knowledge transfer, and design principles in surgery. Moritz has an academic background in media studies, science and technology studies and digital health. His research explores mixed and virtual reality, imaging technologies and 3D/4D simulation in surgery."
-  }
-]
+  }],
+  "topicsOfInterest": {
+  "text": "Rather than addressing these barriers in isolation, we organize discussions around three key themes that are central to advancing field studies in HCI:",
+  "bullets": [
+    {
+      "title": "Structural Challenges in Conducting Field Research",
+      "content": "How can we shift the publishing incentives in HCI to better support real-world research? What funding structures are needed to enable long-term, field-based studies instead of short-term lab projects? How can we make longitudinal field studies more feasible within current academic and industry collaboration models?"
+    },
+    {
+      "title": "Regulatory and Ethical Considerations",
+      "content": "How can researchers navigate the Forschungsdatenschutzgesetz, the EU AI Act, and other regulatory constraints when collecting real-world data? What are best practices for ensuring compliance while maintaining the scientific integrity and ecological validity of field research? How can research institutions support standardized, legally sound data-sharing frameworks?"
+    },
+    {
+      "title": "Practical Methodologies for Moving into the Field",
+      "content": "What methods and tools have successfully enabled field studies in HCI? How can we ensure collaboration between AI systems, digital tools, and human teams in real-world research? What are the best ways to measure impact and effectiveness in field settings while maintaining methodological rigor?"
+    }
+  ]
+}
    },
     {
     "id": "2",

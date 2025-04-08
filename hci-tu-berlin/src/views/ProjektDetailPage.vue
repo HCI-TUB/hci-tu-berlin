@@ -106,7 +106,25 @@
           :key="index"
           class="py-2"
         >
-          {{ bullet }}
+          <b>{{ bullet.title }}: </b>{{ bullet.content }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Topics of Interest -->
+    <div
+      v-if="projekt.topicsOfInterest"
+      class="bg-gray-50 p-6 rounded-lg shadow-md"
+    >
+      <h2 class="text-2xl tracking-widest mb-4">Topics of Interest</h2>
+      <p class="mb-4 leading-relaxed">{{ projekt.topicsOfInterest.text }}</p>
+      <ul class="pl-4 list-disc list-outside text-lg">
+        <li
+          v-for="(bullet, index) in projekt.topicsOfInterest.bullets"
+          :key="index"
+          class="py-2"
+        >
+          <b>{{ bullet.title }}: </b>{{ bullet.content }}
         </li>
       </ul>
     </div>

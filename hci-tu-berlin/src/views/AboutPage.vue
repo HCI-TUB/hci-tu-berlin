@@ -1,11 +1,11 @@
 <template>
   <div class="w-full px-4 sm:px-6 lg:px-8 space-y-8">
-    <div class="md:text-4xl sm:text-3xl tracking-wide text-center my-8">
+    <div class="md:text-4xl sm:text-3xl tracking-wide text-left my-8">
       Welcome to the Human-Computer Interaction Lab
     </div>
     <!-- Slideshow or Image Section -->
     <img
-      class="pt-2 pb-6 relative w-full sm:w-[85%] mx-auto"
+      class="pt-2 pb-6 relative w-full mx-auto"
       src="/people/hci-team.jpeg"
       alt="HCI Team"
     />
