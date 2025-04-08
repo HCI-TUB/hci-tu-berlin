@@ -7,7 +7,6 @@ import PersonDetailPage from "./views/PersonDetailPage.vue";
 import PublicationsPage from "./views/PublicationsPage.vue";
 import ContactPage from "./views/ContactPage.vue";
 import ProjektDetailPage from "./views/ProjektDetailPage.vue";
-import { path } from "pixi.js";
 
 const routes = [
   { path: "/", component: AboutPage },
