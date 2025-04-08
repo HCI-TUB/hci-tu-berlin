@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="text-2xl mb-2 tracking-wide text-justify">{{ title }}</h2>
+    <div class="text-2xl mb-2 tracking-wide text-justify">{{ title }}</div>
     <p class="text-gray-700 text-left">{{ text }}</p>
     <div
       v-if="media && media.length"

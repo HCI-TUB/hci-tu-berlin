@@ -15,14 +15,14 @@ const routes = [
   { path: "/people", name: "PersonenPage", component: PersonenPage },
   { path: "/projects", name: "ProjektePage", component: ProjektePage },
   {
-    path: "/projects/:id",
+    path: "/projects/:title",
     name: "ProjektDetailPage",
     props: true,
     component: ProjektDetailPage,
   },
   { path: "/teaching", component: LehrePage },
   { path: "/publications", component: PublicationsPage },
-  { path: "/people/:id", name: "PersonDetail", component: PersonDetailPage },
+  { path: "/people/:name", name: "PersonDetail", component: PersonDetailPage },
   { path: "/contact", component: ContactPage },
 ];
 

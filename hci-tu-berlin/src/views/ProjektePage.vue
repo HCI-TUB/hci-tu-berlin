@@ -5,11 +5,13 @@
       <div
         v-for="(projekt, index) in research"
         :key="index"
-        class="bg-gray-100 p-6 rounded-lg shadow-md hover:bg-red-100 transition-colors duration-300"
+        class="bg-gray-50 p-6 rounded-lg shadow-md hover:bg-red-50 transition-colors duration-300"
       >
         <router-link
-          :to="{ name: 'ProjektDetailPage', params: { id: projekt.id } }"
-          class="block no-underline"
+          :to="{
+            name: 'ProjektDetailPage',
+            params: { title: slugify(projekt.title) },
+          }"
         >
           <Projekt
             :title="projekt.title"
@@ -26,6 +28,7 @@
 <script>
 import Projekt from "@/components/ProjectCard.vue";
 import { research } from "@/data/researchData.json";
+import { slugify } from "@/utils/slugify";
 
 export default {
   name: "ProjektePage",
@@ -36,6 +39,9 @@ export default {
     return {
       research,
     };
+  },
+  methods: {
+    slugify,
   },
 };
 </script>
