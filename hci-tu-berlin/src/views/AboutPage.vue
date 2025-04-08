@@ -1,9 +1,15 @@
 <template>
-  <div class="w-full">
-    <h1 class="text-3xl text-left my-8">
+  <div class="w-full px-4 sm:px-6 lg:px-8 space-y-8">
+    <div class="md:text-4xl sm:text-3xl tracking-wide text-center my-8">
       Welcome to the Human-Computer Interaction Lab
-    </h1>
-    <img class="pt-2 pb-6" src="/people/hci-team.jpeg" alt="" />
+    </div>
+    <!-- Slideshow or Image Section -->
+    <img
+      class="pt-2 pb-6 relative w-full sm:w-[85%] mx-auto"
+      src="/people/hci-team.jpeg"
+      alt="HCI Team"
+    />
+    <!-- Description Section -->
     <p class="text-justify w-full text-lg">
       In the Human-Computer Interaction (HCI) Lab, led by Prof Dr Ceenu George,
       we explore the dynamic world of immersive virtual reality (VR) systems
@@ -23,9 +29,12 @@
       if you would like to join us or exchange ideas!
     </p>
     <hr class="mt-4" />
-    <div class="flex items-center mt-4">
-      <img class="w-8 mr-2" src="/assets/hci-logo.jpg" alt="hci logo" />
-      <p class="text-justify text-lg my-2">
+    <!-- Instagram Section -->
+    <div
+      class="flex flex-col items-center sm:flex-row sm:items-start mt-4 space-y-4 sm:space-y-0 sm:space-x-4"
+    >
+      <img class="w-16 sm:w-8" src="/assets/hci-logo.jpg" alt="HCI Logo" />
+      <p class="text-justify text-lg">
         <a
           class="hover:text-custom-red"
           href="https://www.instagram.com/hci_tuberlin/"
@@ -35,13 +44,14 @@
       </p>
     </div>
     <hr class="my-4" />
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- Theses Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <img
-        class="w-full max-h-32rem"
+        class="relative w-full sm:w-[70%] max-h-32rem mx-auto"
         src="/assets/hmd-photo.png"
         alt="HMD Photo"
       />
-      <div class="flex flex-col">
+      <div class="flex flex-col space-y-4">
         <h2 class="text-2xl text-justify my-2">Bachelor and Master Theses</h2>
         <p class="text-justify text-lg">
           We regularly announce an info date for open bachelor theses on this
@@ -54,12 +64,37 @@
         </p>
       </div>
     </div>
+    <!-- Featured Project Section -->
+    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:bg-red-50">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">{{ featuredProject.title }}</h3>
+        <p class="text-justify mb-4">{{ featuredProject.text }}</p>
+        <router-link
+          :to="{
+            name: 'ProjektDetailPage',
+            params: { title: slugify(featuredProject.title) },
+          }"
+          class="text-custom-red hover:underline"
+          >Learn more about this project →</router-link
+        >
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import { slugify } from "@/utils/slugify";
+import { research } from "@/data/researchData.json";
 export default {
   name: "AboutPage",
+  data() {
+    return {
+      featuredProject: research.find((project) => project.id === "1"), // Replace "1" with the ID of the desired project
+    };
+  },
+  methods: {
+    slugify,
+  },
 };
 </script>
 

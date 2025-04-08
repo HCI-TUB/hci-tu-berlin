@@ -19,6 +19,8 @@
             muted
             class="w-[200px] h-[400px] object-cover cursor-pointer"
             @click="togglePlay($event)"
+            controlslist="nodownload"
+            disablePictureInPicture
           ></video>
         </div>
       </div>
@@ -45,14 +47,11 @@ export default {
   },
   methods: {
     togglePlay(event) {
-      const video = event.target.closest("video");
-      const mediaItem = this.media.find((item) => item.src === video.src);
+      const video = event.target;
       if (video.paused) {
         video.play();
-        mediaItem.playing = true;
       } else {
         video.pause();
-        mediaItem.playing = false;
       }
     },
   },

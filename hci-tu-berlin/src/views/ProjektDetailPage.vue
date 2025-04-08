@@ -34,12 +34,15 @@
             v-if="item.type === 'video'"
             :src="item.src"
             muted
-            controls
-            class="w-[200px] h-[300px] object-cover"
+            class="w-[200px] h-[300px] object-cover cursor-pointer"
+            @click="togglePlay($event)"
+            controlslist="nodownload"
+            disablePictureInPicture
           ></video>
         </div>
       </div>
     </div>
+
     <!-- Dates Section -->
     <div v-if="projekt.dates" class="bg-gray-50 p-6 rounded-lg shadow-md">
       <h2 class="text-2xl tracking-widest mb-4">Workshop Dates</h2>
@@ -146,6 +149,14 @@ export default {
   methods: {
     goBack() {
       this.$router.push({ name: "ProjektePage" });
+    },
+    togglePlay(event) {
+      const video = event.target;
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
     },
   },
 };

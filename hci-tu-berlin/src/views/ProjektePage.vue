@@ -12,8 +12,9 @@
             name: 'ProjektDetailPage',
             params: { title: slugify(projekt.title) },
           }"
+          class="block"
         >
-          <Projekt
+          <ProjectCard
             :title="projekt.title"
             :subtitle="projekt.subtitle"
             :media="projekt.media"
@@ -26,14 +27,14 @@
 </template>
 
 <script>
-import Projekt from "@/components/ProjectCard.vue";
+import ProjectCard from "@/components/ProjectCard.vue";
 import { research } from "@/data/researchData.json";
 import { slugify } from "@/utils/slugify";
 
 export default {
   name: "ProjektePage",
   components: {
-    Projekt,
+    ProjectCard,
   },
   data() {
     return {
