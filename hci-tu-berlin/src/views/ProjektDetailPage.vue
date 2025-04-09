@@ -18,12 +18,8 @@
       v-if="projekt.media && projekt.media.length"
       class="bg-gray-50 p-6 rounded-lg shadow-md"
     >
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div
-          v-for="(item, index) in projekt.media"
-          :key="index"
-          class="flex justify-center"
-        >
+      <div class="flex flex-wrap gap-8 justify-left">
+        <div v-for="(item, index) in projekt.media" :key="index" class="flex">
           <img
             v-if="item.type === 'image'"
             :src="item.src"

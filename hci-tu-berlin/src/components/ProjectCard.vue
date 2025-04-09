@@ -13,16 +13,6 @@
           :alt="item.alt"
           class="w-[200px] h-[400px] object-cover"
         />
-        <div v-if="item.type === 'video'">
-          <video
-            :src="item.src"
-            muted
-            class="w-[200px] h-[400px] object-cover cursor-pointer"
-            @click="togglePlay($event)"
-            controlslist="nodownload"
-            disablePictureInPicture
-          ></video>
-        </div>
       </div>
     </div>
   </div>
