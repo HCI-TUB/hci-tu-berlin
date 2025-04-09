@@ -67,7 +67,7 @@
             :key="index"
             class="border-b"
           >
-            <td class="pr-4 font-bold">{{ date.time }}</td>
+            <td class="pr-4">{{ date.time }}</td>
             <td>{{ date.event }}</td>
           </tr>
         </tbody>

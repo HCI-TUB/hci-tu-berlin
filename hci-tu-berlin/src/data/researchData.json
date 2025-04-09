@@ -2,32 +2,32 @@
   "research": [{
     "id": "1",
     "title": "MuC 2025 Workshop - Embedding HCI in the Real World",
-    "subtitle": "Strategies for Field Research on Collaboration in Hybrid Spaces",
+    "subtitle": "Strategies for Recruitment and Field Research on Collaboration in Hybrid Spaces",
     "text": "We invite researchers, practitioners, and academics from diverse sectors to participate in our workshop on field studies with emerging technologies in collaborative, hybrid spaces. The workshop will focus on methodologies, challenges, regulatory considerations, and future applications in this domain. We aim to foster discussions and networking opportunities among experts and newcomers alike. The workshop will feature lightning talks, discussions, and a participatory design session to explore different perspectives on conducting field studies in collaborative work settings. Selected submissions will be presented as 5-minute lightning talks followed by 5-minute discussions.",
     "media" : [],
     "dates": [
-                { "time": "Submission Deadline", "event": "TBD" },
-                { "time": "Notification of Acceptance", "event": "TBD" },
-                { "time": "Publication Deadline", "event": "TBD" },
-                { "time": "Workshop @ MuC 2025", "event": "TBD" }
+                { "time": "Submission Deadline", "event": "15.06.2025" },
+                { "time": "Notification of Acceptance", "event": "30.06.2025" },
+                { "time": "Final Submission", "event": "16.07.2025" },
+                { "time": "Workshop @ MuC 2025", "event": "31.08.2025" }
 ],
-    "info" : "PLACEHOLDER Day - Place and Room: (see Campus Map)",
+    "info" : "31.08.2025 ",
     "program": [
-  { "time": "TBD", "event": "Keynote (20 min)" },
-  { "time": "TBD", "event": "Participant presentations highlighting diverse case studies and experiences (10 min each, max 120 mins plus a break of 15 min)" },
-  { "time": "TBD", "event": "Brief introduction to methodological and regulatory considerations (20 mins)" },
-  { "time": "TBD", "event": "Participatory design session to collaboratively develop field study methodologies (120 mins). Based on prior participatory workshops on emerging technologies, participants will be split into groups. Each group will be guided by one of the workshop organizers. There will be three rounds with three different prompts. The aim of this participatory session is to create concrete field study methodologies to develop, investigate and understand emerging technologies in hybrid, collaborative spaces." },
-  { "time": "TBD", "event": "Group presentation and discussion to summarize methodological insights and practical recommendations (60 mins). Each group presents their findings from the participatory design sessions." },
-  { "time": "TBD", "event": "Workshop conclusion to summarize the day and discuss how to proceed with the topic within this community. (20 min)" }
+  { "time": "10AM", "event": "Keynote (20 min)" },
+  { "time": "", "event": "Participant presentations highlighting diverse case studies and experiences (10 min each, max 120 mins plus a break of 15 min)" },
+  { "time": "", "event": "Brief introduction to methodological and regulatory considerations (20 mins)" },
+  { "time": "", "event": "Participatory design session to collaboratively develop field study methodologies (120 mins). Based on prior participatory workshops on emerging technologies, participants will be split into groups. Each group will be guided by one of the workshop organizers. There will be three rounds with three different prompts. The aim of this participatory session is to create concrete field study methodologies to develop, investigate and understand emerging technologies in hybrid, collaborative spaces." },
+  { "time": "", "event": "Group presentation and discussion to summarize methodological insights and practical recommendations (60 mins). Each group presents their findings from the participatory design sessions." },
+  { "time": "", "event": "Workshop conclusion to summarize the day and discuss how to proceed with the topic within this community. (20 min)" }
 ],
   "submissions": {
   "text": "We invite researchers, practitioners, and academics from diverse sectors to participate in our workshop on field studies with emerging technologies in collaborative, hybrid spaces. The workshop will focus on methodologies, challenges, regulatory considerations, and future applications in this domain. We aim to foster discussions and networking opportunities among experts and newcomers alike.",
   "bullets": [
-    "Deadline: TBD.",
+    "Deadline: 15.06.2025",
     "Format: Position paper of 1 to 2 pages in the ACM two-column template using the <span style=\"color:#740712\"><a href='https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc' target='_blank' >Overleaf template.</a></span>",
     "Topics: Papers should address field study experiences, methodologies, emerging technologies, regulatory considerations, or propose concepts for future applications.",
     "All submissions must include author information",
-    "Please submit your position paper through <span style=\"color:#740712\"><a href='https://www.conftool.com/muc2025/' target='_blank'>ConfTool</a></span>.",
+    "Please submit your position paper through <span style=\"color:#740712\"><a href='https://www.conftool.pro/muc2025/index.php/' target='_blank'>ConfTool</a></span>.",
     "Submissions will be reviewed by workshop organizers and fellow participants. Accepted submissions will be included in the <span style=\"color:#740712\"><a href='https://dl.gi.de/' target='_blank'>GI Digital Library</a></span>.",
     "At least one author of each accepted submission must attend in person and register for at least one day of the conference.",
     "Six selected submissions will be presented in the form of lightning talks (5 mins each) with subsequent discussion (5 mins each). All other accepted submissions will be presented in the form of posters."
