@@ -33,6 +33,11 @@
           >
         </li>
         <li>
+          <router-link to="/theses" class="hover:text-custom-red"
+            >Theses</router-link
+          >
+        </li>
+        <li>
           <router-link to="/publications" class="hover:text-custom-red"
             >Publications</router-link
           >
@@ -42,6 +47,7 @@
             >Contact</router-link
           >
         </li>
+        
       </ul>
     </div>
 
