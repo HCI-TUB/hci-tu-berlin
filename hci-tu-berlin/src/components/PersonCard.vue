@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     goToDetail() {
-      this.$router.push({ name: "PersonDetail", params: { id: this.id } });
+      this.$router.push({ name: "PersonDetailPage", params: { id: this.id } });
     },
   },
 };

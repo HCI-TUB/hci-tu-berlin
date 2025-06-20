@@ -21,7 +21,7 @@ const routes = [
   },
   { path: "/teaching", component: LehrePage },
   { path: "/publications", component: PublicationsPage },
-  { path: "/people/:name", name: "PersonDetail", component: PersonDetailPage },
+  { path: "/people/:id", name: "PersonDetailPage", component: PersonDetailPage },
   { path: "/contact", component: ContactPage },
 ];
 
