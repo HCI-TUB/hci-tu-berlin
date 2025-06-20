@@ -44,26 +44,7 @@
       </p>
     </div>
     <hr class="my-4" />
-    <!-- Theses Section -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <img
-        class="relative w-full sm:w-[70%] max-h-32rem mx-auto"
-        src="/assets/hmd-photo.png"
-        alt="HMD Photo"
-      />
-      <div class="flex flex-col space-y-4">
-        <h2 class="text-2xl text-justify my-2">Bachelor and Master Theses</h2>
-        <p class="text-justify text-lg">
-          We regularly announce an info date for open bachelor theses on this
-          page, which all interested parties can attend. As long as there is no
-          date, we have no availability for bachelor theses. For master theses:
-          Write an email to
-          <a class="hover:text-custom-red" href="mailto:admin@hci.tu-berlin.de"
-            >admin@hci.tu-berlin.de</a
-          >.
-        </p>
-      </div>
-    </div>
+    
     <!-- Featured Project Section -->
     <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:bg-red-50">
       <div>
@@ -79,6 +60,20 @@
         >
       </div>
     </div>
+     <!-- Thesis Featured Project Preview -->
+    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:bg-red-50">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Bachelor & Master Theses</h3>
+        <p class="text-justify mb-4">
+          We regularly supervise bachelor's and master's theses on topics such as usable security, cross-reality interaction, and inclusive design. Find out more about the process and potential topics.
+        </p>
+        <router-link
+          :to="{ name: 'ThesisPage' }"
+          class="text-custom-red hover:underline"
+          >Learn more about theses →</router-link
+        >
+      </div>
+        </div>
   </div>
 </template>
 
@@ -89,7 +84,7 @@ export default {
   name: "AboutPage",
   data() {
     return {
-      featuredProject: research.find((project) => project.id === "1"), // Replace "1" with the ID of the desired project
+      featuredProject: research.find((project) => project.id === "1"),
     };
   },
   methods: {

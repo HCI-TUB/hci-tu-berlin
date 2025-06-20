@@ -3,10 +3,10 @@
     "id": "1",
     "title": "MuC 2025 Workshop - Embedding HCI in the Real World",
     "subtitle": "Strategies for Recruitment and Field Research on Collaboration in Hybrid Spaces",
-    "text": "We invite researchers, practitioners, and academics from diverse sectors to participate in our workshop on field studies with emerging technologies in collaborative, hybrid spaces. The workshop will focus on methodologies, challenges, regulatory considerations, and future applications in this domain. We aim to foster discussions and networking opportunities among experts and newcomers alike. The workshop will feature lightning talks, discussions, and a participatory design session to explore different perspectives on conducting field studies in collaborative work settings. Selected submissions will be presented as 5-minute lightning talks followed by 5-minute discussions.",
+    "text": "We invite researchers, practitioners, and academics from diverse sectors to participate in our workshop on field studies with emerging technologies in collaborative, hybrid spaces. The workshop will focus on recruitment, methodologies, challenges, regulatory considerations, and future applications in this domain. We aim to foster discussions and networking opportunities among experts and newcomers alike. The workshop will feature lightning talks, discussions, and a participatory design session to explore different perspectives on conducting field studies in collaborative work settings. Selected submissions will be presented as 5-minute lightning talks followed by 5-minute discussions.",
     "media" : [],
     "dates": [
-                { "time": "Submission Deadline", "event": "15.06.2025" },
+                { "time": "Submission Deadline", "event": "22.06.2025" },
                 { "time": "Notification of Acceptance", "event": "30.06.2025" },
                 { "time": "Final Submission", "event": "16.07.2025" },
                 { "time": "Workshop @ MuC 2025", "event": "31.08.2025" }
@@ -21,11 +21,11 @@
   { "time": "", "event": "Workshop conclusion to summarize the day and discuss how to proceed with the topic within this community. (20 min)" }
 ],
   "submissions": {
-  "text": "We invite researchers, practitioners, and academics from diverse sectors to participate in our workshop on field studies with emerging technologies in collaborative, hybrid spaces. The workshop will focus on methodologies, challenges, regulatory considerations, and future applications in this domain. We aim to foster discussions and networking opportunities among experts and newcomers alike.",
+  "text": "We invite researchers, practitioners, and academics from diverse sectors to participate in our workshop on field studies with emerging technologies in collaborative, hybrid spaces. The workshop will focus on methodologies, challenges, regulatory considerations, recruitment strategies and future applications in this domain. We aim to foster discussions and networking opportunities among experts and newcomers alike.",
   "bullets": [
-    "Deadline: 15.06.2025",
+    "Deadline: 22.06.2025",
     "Format: Position paper of 1 to 2 pages in the ACM two-column template using the <span style=\"color:#740712\"><a href='https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc' target='_blank' >Overleaf template.</a></span>",
-    "Topics: Papers should address field study experiences, methodologies, emerging technologies, regulatory considerations, or propose concepts for future applications.",
+    "Topics: Papers should address field study experiences, methodologies, emerging technologies, regulatory considerations, recruitment strategies or propose concepts for future applications.",
     "All submissions must include author information",
     "Please submit your position paper through <span style=\"color:#740712\"><a href='https://www.conftool.pro/muc2025/index.php/' target='_blank'>ConfTool</a></span>.",
     "Submissions will be reviewed by workshop organizers and fellow participants. Accepted submissions will be included in the <span style=\"color:#740712\"><a href='https://dl.gi.de/' target='_blank'>GI Digital Library</a></span>.",
@@ -52,6 +52,10 @@
     {
       "title": "Address structural barriers in publishing and funding that discourage field studies",
       "content": "Participants will discuss how HCI publishing norms favor lab-based research, limiting incentives for longitudinal, real-world studies. This discussion will explore how we can address this as a community."
+    },
+    {
+      "title": "Develop inclusive recruitment strategies and confidence-building measures for successful field access in field studies",
+      "content": ""
     }
   ]
 },
@@ -121,6 +125,10 @@
     {
       "title": "Practical Methodologies for Moving into the Field",
       "content": "What methods and tools have successfully enabled field studies in HCI? How can we ensure collaboration between AI systems, digital tools, and human teams in real-world research? What are the best ways to measure impact and effectiveness in field settings while maintaining methodological rigor?"
+    },
+    {
+      "title": "Challenges in Participant Recruitment and Decision-Making",
+      "content": "What strategies can be employed to effectively recruit hard-to-reach groups, including marginalized populations and experts in specific contexts? How can we address the individual barriers—such as fear and mistrust—as well as the methodological difficulties in sampling that hinder participation?"
     }
   ]
 }

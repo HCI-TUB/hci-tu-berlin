@@ -7,6 +7,7 @@ import PersonDetailPage from "./views/PersonDetailPage.vue";
 import PublicationsPage from "./views/PublicationsPage.vue";
 import ContactPage from "./views/ContactPage.vue";
 import ProjektDetailPage from "./views/ProjektDetailPage.vue";
+import ThesisPage from "./views/ThesisPage.vue";
 
 const routes = [
   { path: "/", component: AboutPage },
@@ -23,6 +24,7 @@ const routes = [
   { path: "/publications", component: PublicationsPage },
   { path: "/people/:id", name: "PersonDetailPage", component: PersonDetailPage },
   { path: "/contact", component: ContactPage },
+  {path: '/theses', name:"ThesisPage", component: ThesisPage},
 ];
 
 const router = createRouter({
