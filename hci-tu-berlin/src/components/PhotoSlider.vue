@@ -4,7 +4,7 @@
       <img
         :src="photos[currentIndex].src"
         :alt="photos[currentIndex].caption"
-        class="w-full h-[32rem] object-cover rounded shadow"
+        class="w-full h-80 object-cover rounded shadow"
       />
       <!-- Left Arrow -->
       <button

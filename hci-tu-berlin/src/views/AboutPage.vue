@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-4 sm:px-6 lg:px-8 space-y-8">
+  <div class="w-full px-0 lg:px-8 space-y-8">
     <div class="md:text-4xl sm:text-3xl text-left tracking-wide my-8">
       Welcome to the Human-Computer Interaction Lab
     </div>
