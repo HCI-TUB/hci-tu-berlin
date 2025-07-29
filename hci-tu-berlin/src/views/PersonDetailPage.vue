@@ -11,23 +11,48 @@
         />
       </div>
       <div class="flex-1 mt-4">
-        <p><strong>Email:</strong> {{ person.email }}</p>
+        <p>
+          <strong>Email:</strong>
+          <a
+            :href="'mailto:' + person.email"
+            class="text- email-link hover:text-custom-red"
+            >{{ person.email }}</a
+          >
+        </p>
         <p><strong>Room:</strong> {{ person.room }}</p>
         <p class="mt-4 mb-8 text-justify">{{ person.description }}</p>
       </div>
     </div>
     <div v-for="(section, index) in person.cv" :key="index" class="mb-8">
       <h2 class="text-2xl tracking-widest my-4">{{ section.title }}</h2>
-      <ul class="list-disc list-inside text-lg">
+      <!-- Render as list if items have 'year', else as paragraphs -->
+      <ul
+        v-if="section.items && section.items.length && section.items[0].year"
+        class="list-disc list-inside text-lg"
+      >
         <li
           class="my-2"
           v-for="(item, itemIndex) in section.items"
           :key="itemIndex"
         >
           <i>{{ item.year }}</i
-          >, {{ item.title }}
+          >, {{ item.title
+          }}<span v-if="item.description">, {{ item.description }}</span>
         </li>
       </ul>
+      <div v-else-if="section.items && section.items.length">
+        <div v-for="(item, itemIndex) in section.items" :key="itemIndex">
+          <p
+            v-for="key in Object.keys(item).filter(
+              (k) => k.startsWith('text') && item[k]
+            )"
+            :key="key"
+            class="mb-2"
+          >
+            {{ item[key] }}
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -39,7 +64,9 @@ export default {
   name: "PersonDetailPage",
   data() {
     return {
-      person: persons.find((p) => p.id === this.$route.params.id),
+      person: persons.find(
+        (p) => String(p.id) === String(this.$route.params.id)
+      ),
     };
   },
   computed: {

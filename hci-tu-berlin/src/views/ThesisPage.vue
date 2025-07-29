@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="text-justify">
     <h1 class="text-3xl text-left mb-8 tracking-widest">Bachelor & Master Theses</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -12,13 +12,13 @@
           <h2 class="text-2xl text-left tracking-widest mb-2">Process & Application</h2>
           <ul class="list-none text-left">
             <li class="mb-4">
-              <h3 class="text-xl mb-1">Bachelor Theses</h3>
+              <h3 class="text-l mb-1 font-bold">Bachelor Theses</h3>
               <p>
                 We regularly announce an information session for interested students on this website. As long as no date is listed, we unfortunately cannot offer supervision for bachelor theses.
               </p>
             </li>
             <li>
-              <h3 class="text-xl mb-1">Master Theses</h3>
+              <h3 class="text-l mb-1 font-bold">Master Theses</h3>
               <p>
                 If you are interested in writing a master's thesis with us, please send an email to
                 <a class="hover:text-custom-red" href="mailto:admin@hci.tu-berlin.de">admin@hci.tu-berlin.de</a>.

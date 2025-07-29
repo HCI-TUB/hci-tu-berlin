@@ -1,6 +1,6 @@
 <template>
   <div class="w-full px-4 sm:px-6 lg:px-8 space-y-8">
-    <div class="md:text-4xl sm:text-3xl tracking-wide text-left my-8">
+    <div class="md:text-4xl sm:text-3xl text-left tracking-wide my-8">
       Welcome to the Human-Computer Interaction Lab
     </div>
     <!-- Slideshow or Image Section -->
@@ -11,18 +11,36 @@
     />
     <!-- Description Section -->
     <p class="text-justify w-full text-lg">
-      In the Human-Computer Interaction (HCI) Lab, led by Prof Dr Ceenu George,
-      we explore the dynamic world of immersive virtual reality (VR) systems
-      with the aim of improving user interaction with these technologies. Our
-      research focusses on: Social acceptability: investigating the impact of
-      head-mounted displays (HMDs) on bystanders and developing socially
-      acceptable methods of interaction. Usable security and privacy: Developing
-      secure and user-friendly authentication mechanisms for VR environments.
-      Mixed reality: Enabling seamless transitions between virtual and physical
-      spaces to improve user perception and safety. Our goal is to make VR
-      technologies more accessible, secure and user-friendly for everyday
-      applications.
-      <br /><br />
+      At our lab, we explore how augmented and virtual reality systems can
+      support ongoing human learning through peripheral interaction in hybrid
+      environments—spaces where physical, 2D, and 3D digital worlds blend.
+      Grounded in human-computer interaction, our research investigates how
+      people engage in multitasking, multimodal experiences across devices and
+      dimensions. We design and prototype AR and VR systems that align with the
+      way humans naturally perceive, move, and learn—supporting subtle,
+      continuous learning that happens not just at the center of attention, but
+      at its edges. A key focus of our work is enabling users to stay aware of
+      what AI systems are doing—even when those systems take over tasks—so that
+      users are always ready to understand, interpret, and step in when needed.
+      We believe peripheral, embodied learning is essential to building human-AI
+      partnerships that are transparent, trustworthy, and adaptable.
+    </p>
+    <div class="text-justify w-full text-lg">
+      <strong>Topics include:</strong>
+      <ol class="list-decimal ml-6">
+        <li>Peripheral Feedback for System Transparency in AR/VR Systems</li>
+        <li>Human-in-the-Loop Learning in Hybrid Immersive Environments</li>
+        <li>Seamless Transitions Between Physical and Virtual Realities</li>
+        <li>
+          Cross-Device Interaction for Continuous Learning in Hybrid Spaces
+        </li>
+        <li>Trust Calibration Through Peripheral Cues in VR</li>
+        <li>Usable Security and Privacy: Secondary Interactions</li>
+        <li>Democratising AR/VR Development</li>
+        <li>Accessibility for AR/VR</li>
+      </ol>
+    </div>
+    <p class="text-left text-lg">
       <router-link to="/contact" class="hover:text-custom-red"
         >Contact us</router-link
       >
@@ -44,7 +62,10 @@
       </p>
     </div>
     <hr class="my-4" />
-    
+    <div class="md:text-2xl sm:text-xl tracking-wide text-left my-8 font-bold">
+      Featured Projects
+    </div>
+
     <!-- Featured Project Section -->
     <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:bg-red-50">
       <div>
@@ -60,12 +81,14 @@
         >
       </div>
     </div>
-     <!-- Thesis Featured Project Preview -->
+    <!-- Thesis Featured Project Preview -->
     <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:bg-red-50">
       <div>
         <h3 class="text-xl font-semibold mb-2">Bachelor & Master Theses</h3>
         <p class="text-justify mb-4">
-          We regularly supervise bachelor's and master's theses on topics such as usable security, cross-reality interaction, and inclusive design. Find out more about the process and potential topics.
+          We regularly supervise bachelor's and master's theses on topics such
+          as usable security, cross-reality interaction, and inclusive design.
+          Find out more about the process and potential topics.
         </p>
         <router-link
           :to="{ name: 'ThesisPage' }"
@@ -73,18 +96,29 @@
           >Learn more about theses →</router-link
         >
       </div>
-        </div>
+    </div>
+    <!-- Photo Slider -->
+    <div class="md:text-2xl sm:text-xl tracking-wide text-left my-8 font-bold">
+      Impressions from our Lab
+    </div>
+    <PhotoSlider :photos="photos"></PhotoSlider>
   </div>
 </template>
 
 <script>
 import { slugify } from "@/utils/slugify";
 import { research } from "@/data/researchData.json";
+import PhotoSlider from "@/components/PhotoSlider.vue";
+import photos from "@/data/photoslider.json";
 export default {
   name: "AboutPage",
+  components: {
+    PhotoSlider,
+  },
   data() {
     return {
       featuredProject: research.find((project) => project.id === "1"),
+      photos,
     };
   },
   methods: {
