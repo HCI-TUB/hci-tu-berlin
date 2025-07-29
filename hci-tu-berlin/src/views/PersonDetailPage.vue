@@ -20,7 +20,9 @@
           >
         </p>
         <p><strong>Room:</strong> {{ person.room }}</p>
-        <p class="mt-4 mb-8 text-justify">{{ person.description }}</p>
+        <p class="mt-4 mb-8 text-left md:text-justify">
+          {{ person.description }}
+        </p>
       </div>
     </div>
     <div v-for="(section, index) in person.cv" :key="index" class="mb-8">

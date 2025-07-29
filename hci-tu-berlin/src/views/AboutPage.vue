@@ -25,7 +25,7 @@
       We believe peripheral, embodied learning is essential to building human-AI
       partnerships that are transparent, trustworthy, and adaptable.
     </p>
-    <div class="text-justify w-full text-lg">
+    <div class="text-left w-full text-lg">
       <strong>Topics include:</strong>
       <ol class="list-decimal ml-6">
         <li>Peripheral Feedback for System Transparency in AR/VR Systems</li>
@@ -70,7 +70,9 @@
     <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:bg-red-50">
       <div>
         <h3 class="text-xl font-semibold mb-2">{{ featuredProject.title }}</h3>
-        <p class="text-justify mb-4">{{ featuredProject.text }}</p>
+        <p class="md:text-justify text-left mb-4">
+          {{ featuredProject.text }}
+        </p>
         <router-link
           :to="{
             name: 'ProjektDetailPage',
@@ -85,7 +87,7 @@
     <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:bg-red-50">
       <div>
         <h3 class="text-xl font-semibold mb-2">Bachelor & Master Theses</h3>
-        <p class="text-justify mb-4">
+        <p class="md:text-justify text-left mb-4">
           We regularly supervise bachelor's and master's theses on topics such
           as usable security, cross-reality interaction, and inclusive design.
           Find out more about the process and potential topics.
