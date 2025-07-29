@@ -35,7 +35,7 @@
           For a virtual consultation hour with Prof. George, sign up
           <a
             class="text-custom-red hover:text-custom-red-dark"
-            href="https://isis.tu-berlin.de/course/view.php?id=41699"
+            href="https://isis.tu-berlin.de/mod/organizer/view.php?id=2008365"
             target="_blank"
             rel="noopener noreferrer"
             >here</a
