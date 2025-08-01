@@ -31,16 +31,19 @@
                 please send an email to
                 <a
                   class="hover:text-custom-red"
-                  href="mailto:admin@hci.tu-berlin.de"
-                  >admin@hci.tu-berlin.de</a
+                  href="mailto:lehre@hci.tu-berlin.de"
+                  >lehre@hci.tu-berlin.de</a
                 >.
               </p>
               <p>Your email should include the following:</p>
               <ul class="list-disc ml-6">
-                <li>A current transcript of records</li>
                 <li>
                   A brief motivation letter outlining your academic focus,
                   interests and (if applicable) your own topic idea
+                </li>
+                <li>
+                  We encourage you to send your current transcript of records as
+                  well
                 </li>
               </ul>
             </li>
