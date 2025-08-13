@@ -103,7 +103,7 @@
     <div class="md:text-2xl sm:text-xl tracking-wide text-left my-8 font-bold">
       Impressions from our Lab
     </div>
-    <PhotoSlider :photos="photos"></PhotoSlider>
+    <PhotoSlider :titles="['Events']" />
   </div>
 </template>
 
@@ -111,7 +111,6 @@
 import { slugify } from "@/utils/slugify";
 import { research } from "@/data/researchData.json";
 import PhotoSlider from "@/components/PhotoSlider.vue";
-import photos from "@/data/photoslider.json";
 export default {
   name: "AboutPage",
   components: {
@@ -120,7 +119,6 @@ export default {
   data() {
     return {
       featuredProject: research.find((project) => project.id === "1"),
-      photos,
     };
   },
   methods: {

@@ -132,20 +132,4 @@
     }
   ]
 }
-   },
-    {
-    "id": "2",
-     "title": "Indoor Navigation",
-     "text": "A video demonstration of a prototype for indoor navigation using a smartphone with augmented reality.",
-     "media" : [{
-        "type": "video",
-        "src": "/assets/Navigation1.mp4",
-        "alt": "Indoor Navigation"
-     }, {
-        "type": "video",
-        "src": "/assets/Navigation2.mp4",
-        "alt": "Indoor Navigation"
-     }]
-    }
-  ]
-}
+}]}

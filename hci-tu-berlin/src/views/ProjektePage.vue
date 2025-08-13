@@ -22,11 +22,14 @@
           />
         </router-link>
       </div>
+      <PhotoGallery :titles="['Events']" />
+      <PhotoGallery :titles="['Projects']" />
     </div>
   </div>
 </template>
 
 <script>
+import PhotoGallery from "@/components/PhotoGallery.vue";
 import ProjectCard from "@/components/ProjectCard.vue";
 import { research } from "@/data/researchData.json";
 import { slugify } from "@/utils/slugify";
@@ -35,6 +38,7 @@ export default {
   name: "ProjektePage",
   components: {
     ProjectCard,
+    PhotoGallery,
   },
   data() {
     return {
