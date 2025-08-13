@@ -1,0 +1,34 @@
+[
+  {
+    "id": "manual-1",
+    "title": "Prediction of Listener Perception of Argumentative Speech in a Crowdsourced Dataset Using (Psycho-)Linguistic and Fluency Features",
+    "authors": "[{\"name\": \"Yu Qiao\"}, {\"name\": \"Sourabh Zanwar\"}, {\"name\": \"Rishab Bhattacharyya\"}, {\"name\": \"Daniel Wiechmann\"}, {\"name\": \"Wei Zhou\"}, {\"name\": \"Elma Kerz\"}, {\"name\": \"Ralf Schlüter\"}]",
+    "externalIds": "{\"ArXiv\": \"2111.07130\", \"DBLP\": \"journals/corr/abs-2111-07130\"}",
+    "publicationDate": "2021",
+    "venue": "CoRR",
+    "openAccessPdf": "{\"url\": \"https://arxiv.org/abs/2111.07130\"}",
+    "publicationVenue": "{}"
+  },
+  {
+    "id": "manual-2",
+    "title": "MINAR: Mobile Indoor Navigation using Augmented Reality",
+    "authors": "[{\"name\": \"Rishab Bhattacharyya\"}, {\"name\": \"Urs Riedlinger\"}]",
+    "externalIds": "{\"PDF\": \"https://dl.gi.de/server/api/core/bitstreams/81b5f514-5824-474d-b13e-1fb09170184f/content\"}",
+    "publicationDate": "2023",
+    "venue": "GI VR/AR Workshop",
+    "openAccessPdf": "null",
+    "publicationVenue": "{\"organization\": \"Gesellschaft für Informatik eV\"}"
+  },
+  {
+    "id": "manual-3",
+    "title": "Exploring an XR Indoor Navigation System for Remote Collaboration",
+    "authors": "[{\"name\": \"Rishab Bhattacharyya\"}, {\"name\": \"Linda Hirsch\"}, {\"name\": \"Leif Oppermann\"}]",
+    "externalIds": "{}",
+    "publicationDate": "2024-10-09",
+    "venue": "Proceedings of the 30th ACM Symposium on Virtual Reality Software and Technology",
+    "openAccessPdf": "null",
+    "publicationVenue": "{}",
+    "pages": "1-2",
+    "description": "This poster presents an extended reality remote collaboration system using AR-based indoor navigation for on-site and a BIM-based VR system for remote users. A user study with ten participants (five pairs) provides initial insights into usability and preferences for collaborative tools."
+  }
+]

@@ -11,7 +11,7 @@
         />
       </div>
       <div class="flex-1 mt-4">
-        <p>
+        <p v-if="person.email">
           <strong>Email:</strong>
           <a
             :href="'mailto:' + person.email"
@@ -19,17 +19,24 @@
             >{{ person.email }}</a
           >
         </p>
-        <p><strong>Room:</strong> {{ person.room }}</p>
-        <p class="mt-4 mb-8 text-left md:text-justify">
+        <p v-if="person.room"><strong>Room:</strong> {{ person.room }}</p>
+        <p
+          v-if="person.description"
+          class="mt-4 mb-8 text-left md:text-justify"
+        >
           {{ person.description }}
         </p>
       </div>
     </div>
     <div v-for="(section, index) in person.cv" :key="index" class="mb-8">
       <h2 class="text-2xl tracking-widest my-4">{{ section.title }}</h2>
-      <!-- Render as list if items have 'year', else as paragraphs -->
+      <!-- Render as list if any item has 'year', else as paragraphs -->
       <ul
-        v-if="section.items && section.items.length && section.items[0].year"
+        v-if="
+          section.items &&
+          section.items.length &&
+          section.items.some((item) => item.year !== undefined)
+        "
         class="list-disc list-inside text-lg"
       >
         <li
@@ -37,8 +44,10 @@
           v-for="(item, itemIndex) in section.items"
           :key="itemIndex"
         >
-          <i>{{ item.year }}</i
-          >, {{ item.title
+          <span v-if="item.year && item.year !== ''"
+            ><i>{{ item.year }}</i
+            >, </span
+          >{{ item.title
           }}<span v-if="item.description">, {{ item.description }}</span>
         </li>
       </ul>

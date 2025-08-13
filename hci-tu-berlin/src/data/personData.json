@@ -138,6 +138,47 @@
     },
     {
       "id": "4",
+      "name": "Garcia, Esteli Mariana",
+      "email": "e.garcia@tu-berlin.de",
+      "room": "EN-357",
+      "officeHours": "",
+      "address": "Einsteinufer 17, Sekr. EN-20",
+      "description_short": "Research Assistant and PhD Student at TU Berlin.",
+      "description": "I am interested in investigating emerging technologies with (XR) within workplace contexts. I envision a future where virtual reality (VR) and augmented reality (AR) devices are as ubiquitous as smartphones, making it essential to facilitate their adoption through research. My focus areas may include hybrid work environments using AR/VR, technological integration into existing workspace systems, and researching multimodal interactions within AR/VR experiences.",
+      "photo": "/people/esteli.jpg",
+      "cv": [
+        {
+          "title": "Professional Background",
+          "items": [
+            {
+              "text": "I have a diverse professional background. Between my bachelor’s and master’s studies, I worked as a lab technician in a biochemistry laboratory, later transitioning to a role as a high school science teacher. More recently, my career expanded into user-experience research, with a particular emphasis on AR technologies at BMW."
+            }
+          ]
+        },
+        {
+          "title": "Education",
+          "items": [
+            {
+              "year": "",
+              "title": "M.Sc., Cognitive Systems",
+              "description": "Ulm University"
+            },
+            {
+              "year": "",
+              "title": "B.A., Psychology",
+              "description": "University of Washington"
+            },
+            {
+              "year": "",
+              "title": "B.Sc., Biology",
+              "description": "University of Washington"
+            }
+          ]
+      }
+      ]
+    },
+    {
+      "id": "5",
       "name": "Özlem Ocak",
       "email": "ocak@tu-berlin.de",
       "room": "EN-358",
@@ -147,7 +188,7 @@
       "cv": []
     },
     {
-      "id": "5",
+      "id": "6",
       "name": "Thekla Mayer",
       "email": "t.mayer@campus.tu-berlin.de",
       "room": "EN-362",
@@ -157,7 +198,7 @@
       "cv": []
     },
     {
-      "id": "6",
+      "id": "7",
       "name": "Tessa Billens",
       "email": "t.billens@campus.tu-berlin.de",
       "room": "EN-362",
@@ -167,7 +208,7 @@
       "cv": []
     },
     {
-      "id": "7",
+      "id": "8",
       "name": "Cosima Holler",
       "email": "c.holler@campus.tu-berlin.de",
       "room": "EN-362",
