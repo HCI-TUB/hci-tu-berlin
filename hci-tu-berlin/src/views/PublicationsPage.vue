@@ -8,7 +8,7 @@
           :author="formatAuthors(paper.authors) || ''"
           :title="paper.title || ''"
           :doi="paper.externalIds?.doi || ''"
-          :publicationDate="paper.publicationDate || ''"
+          :publicationDate="getYear(paper.publicationDate)"
           :publisher="paper.venue || ''"
           :paperLink="getBestLink(paper)"
           :pdfLink="paper.openAccessPdf?.url || null"
@@ -67,6 +67,12 @@ export default {
         } catch {}
       }
       return null;
+    },
+    getYear(date) {
+      if (!date) return "";
+      // Try to extract the year from the date string
+      const match = date.match(/\d{4}/);
+      return match ? match[0] : date;
     },
   },
   computed: {
