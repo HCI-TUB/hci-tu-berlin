@@ -49,7 +49,11 @@ export default {
     },
     getBestLink(paper) {
       const ids = paper.externalIds ? JSON.parse(paper.externalIds) : {};
-      if (ids.DOI) return `https://doi.org/${ids.DOI}`;
+      if (ids.DOI) {
+        // Remove trailing parenthesis if present
+        const cleanDOI = ids.DOI.replace(/\)+$/, "");
+        return `https://doi.org/${cleanDOI}`;
+      }
       if (ids.ArXiv) return `https://arxiv.org/abs/${ids.ArXiv}`;
       if (ids.DBLP) return `https://dblp.org/rec/${ids.DBLP}`;
       if (ids.PDF) return ids.PDF; // <-- add this line
