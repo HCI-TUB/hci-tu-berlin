@@ -12,6 +12,10 @@ git pull
 
 pnpm install --force
 
+cd "$SCRIPT_DIR/hci-backend"
+
+pnpm install --force
+
 cd "$SCRIPT_DIR/hci-tu-berlin"
 
 pnpm install --force
