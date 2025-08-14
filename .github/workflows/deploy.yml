@@ -8,14 +8,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-          - name: Create SSH key
-            run: |
-              install -m 600 -D /dev/null ~/.ssh/id_rsa
-              echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-              echo "${{ secrets.KNOWN_HOSTS }}" > ~/.ssh/known_hosts
-          - name: Trigger update on production server
-            run: |
-              ssh ubuntu@141.23.69.80 "/home/ubuntu/webpage/rebuildSite.sh"
-          - name: Check if website is up
-            run: |
-              curl --output /dev/null --silent --head --fail hci-tu.hci.tu-berlin.de
+      - name: Create SSH key
+        run: |
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+      - name: Trigger update on production server
+        run: |
+          ssh ubuntu@141.23.71.195 "/home/ubuntu/webpage/rebuildSite.sh"
+      - name: Check if website is up
+        run: |
+          curl --output /dev/null --silent --head --fail www.hci.tu-berlin.de
