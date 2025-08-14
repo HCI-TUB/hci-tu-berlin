@@ -33,7 +33,7 @@ export default {
   methods: {
     async fetchAndStorePapers() {
       try {
-        const response = await axios.get("http://localhost:3000/db/papers");
+        const response = await axios.get("/db/papers");
         console.log("DB Response:", response.data);
         // Merge manual publications with fetched papers
         this.papers = [...manualPublications, ...response.data];
