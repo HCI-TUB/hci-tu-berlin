@@ -77,7 +77,10 @@ export default {
   },
   computed: {
     groupedPapers() {
-      const authorsOfChair = ["Ceenu George", "Rishab Bhattacharyya"];
+      const authorsOfChair = [
+        "Ceenu George",
+        "Rishab Bhattacharyya, David Fuhry",
+      ];
       const grouped = {};
       authorsOfChair.forEach((author) => {
         grouped[author] = this.papers.filter((paper) => {
