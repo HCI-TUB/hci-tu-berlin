@@ -3,7 +3,10 @@
     <div class="text-2xl mb-2 tracking-wide text-left md:text-justify">
       {{ title }}
     </div>
-    <p class="text-gray-700 text-left">{{ text }}</p>
+    <div v-if="subtitle" class="text-lg mb-2 text-left text-gray-600">
+      {{ subtitle }}
+    </div>
+    <p class="text-gray-700 text-left mb-2">{{ description }}</p>
     <div
       v-if="media && media.length"
       class="py-6 mb-4 grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-1"
@@ -24,18 +27,10 @@
 export default {
   name: "ProjectCard",
   props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    media: {
-      type: Array,
-      default: () => [],
-    },
-    text: {
-      type: String,
-      required: true,
-    },
+    title: { type: String, required: true },
+    subtitle: { type: String, default: "" },
+    media: { type: Array, default: () => [] },
+    description: { type: String, required: true },
   },
   methods: {
     togglePlay(event) {

@@ -3,7 +3,7 @@
     <h1 class="text-3xl text-left mb-8 tracking-widest">Research</h1>
     <div class="space-y-6">
       <div
-        v-for="(projekt, index) in research"
+        v-for="(projekt, index) in research.slice().reverse()"
         :key="index"
         class="bg-gray-50 p-6 rounded-lg shadow-md hover:bg-red-50 transition-colors duration-300"
       >
@@ -18,7 +18,7 @@
             :title="projekt.title"
             :subtitle="projekt.subtitle"
             :media="projekt.media"
-            :text="projekt.text"
+            :description="projekt.description"
           />
         </router-link>
       </div>

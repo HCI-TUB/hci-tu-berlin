@@ -1,147 +1,118 @@
 <template>
-  <div class="text-left w-full p-4 space-y-6 bg-gray-100">
+  <div class="text-left w-full p-4 space-y-10 bg-gray-100">
     <button @click="goBack" class="text-xl mr-4">←</button>
-
-    <!-- Title, Subtitle, and Text Section -->
-    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+    <div class="bg-gray-50 p-8 rounded-lg shadow-md">
       <h1 class="text-3xl font-bold text-left mb-4 tracking-widest">
         {{ projekt.title }}
       </h1>
       <div class="text-xl text-left mb-4">
-        <i>{{ projekt.subtitle }} </i>
+        <i>{{ projekt.subtitle }}</i>
       </div>
-      <p class="text-justify">{{ projekt.text }}</p>
+      <p class="text-justify">{{ projekt.description }}</p>
     </div>
 
-    <!-- Media Section -->
+    <!-- PhotoGallery below title/description -->
+    <PhotoGallery
+      v-if="
+        projekt.photos &&
+        projekt.photos[0] &&
+        projekt.photos[0].photoSliderTitle
+      "
+      :titles="[projekt.photos[0].photoSliderTitle]"
+    />
     <div
       v-if="projekt.media && projekt.media.length"
       class="bg-gray-50 p-6 rounded-lg shadow-md"
+    ></div>
+    <div
+      v-if="projekt.dates && projekt.dates.length"
+      class="bg-gray-50 p-6 rounded-lg shadow-md"
     >
-      <div class="flex flex-wrap gap-8 justify-left">
-        <div v-for="(item, index) in projekt.media" :key="index" class="flex">
-          <img
-            v-if="item.type === 'image'"
-            :src="item.src"
-            :alt="item.alt"
-            class="w-[200px] h-[300px] object-cover"
-          />
-          <video
-            v-if="item.type === 'video'"
-            :src="item.src"
-            muted
-            class="w-[200px] h-[300px] object-cover cursor-pointer"
-            @click="togglePlay($event)"
-            controlslist="nodownload"
-            disablePictureInPicture
-          ></video>
-        </div>
-      </div>
-    </div>
-
-    <!-- Dates Section -->
-    <div v-if="projekt.dates" class="bg-gray-50 p-6 rounded-lg shadow-md">
-      <h2 class="text-2xl tracking-widest mb-4">Workshop Dates</h2>
+      <h2 class="text-2xl tracking-widest text-custom-red mb-4">Dates</h2>
       <ul class="list-none space-y-2">
         <li v-for="(date, index) in projekt.dates" :key="index" class="flex">
-          <span class="pr-2">{{ date.time }}: </span>
-          <span>{{ date.event }}</span>
+          <span class="pr-2">{{ date.label }}: </span>
+          <span>{{ date.value }}</span>
         </li>
       </ul>
     </div>
-    <!-- Program Section -->
     <div
-      v-if="projekt.program && projekt.program.length"
+      v-for="(section, idx) in projekt.sections"
+      :key="idx"
       class="bg-gray-50 p-6 rounded-lg shadow-md"
     >
-      <h2 class="text-2xl tracking-widest mb-4">Program</h2>
-      <p class="mb-4">{{ projekt.info }}</p>
-      <table class="table-auto w-full text-left">
+      <h2 class="text-2xl tracking-widest text-custom-red mb-4">
+        {{ section.title }}
+      </h2>
+      <p v-if="section.text" class="mb-4 leading-relaxed">{{ section.text }}</p>
+      <!-- Program Table -->
+      <table
+        v-if="section.type === 'program'"
+        class="table-auto w-full text-left mb-4"
+      >
         <tbody>
-          <tr
-            v-for="(date, index) in projekt.program"
-            :key="index"
-            class="border-b"
-          >
-            <td class="pr-4">{{ date.time }}</td>
-            <td>{{ date.event }}</td>
+          <tr v-for="(item, i) in section.items" :key="i" class="border-b">
+            <td class="pr-4">{{ item.time }}</td>
+            <td>{{ item.event }}</td>
           </tr>
         </tbody>
       </table>
-    </div>
-
-    <!-- Submissions Section -->
-    <div
-      v-if="projekt.submissions && projekt.submissions.text"
-      class="bg-gray-50 p-6 rounded-lg shadow-md"
-    >
-      <h2 class="text-2xl tracking-widest mb-4">Submissions</h2>
-      <!-- Display the text -->
-      <p class="mb-4 leading-relaxed">{{ projekt.submissions.text }}</p>
-      <!-- Display the bullets -->
-      <ul class="list-disc px-4 list-outside text-lg">
-        <li
-          v-for="(bullet, index) in projekt.submissions.bullets"
-          :key="index"
-          v-html="bullet"
-          class="py-2"
-        ></li>
-      </ul>
-    </div>
-
-    <!-- Workshop Focus Section -->
-    <div
-      v-if="projekt.workshopGoals"
-      class="bg-gray-50 p-6 rounded-lg shadow-md"
-    >
-      <h2 class="text-2xl tracking-widest mb-4">Workshop Goals</h2>
-      <p class="mb-4 leading-relaxed">{{ projekt.workshopGoals.text }}</p>
-      <ul class="pl-4 list-disc list-outside text-lg">
-        <li
-          v-for="(bullet, index) in projekt.workshopGoals.bullets"
-          :key="index"
-          class="py-2"
-        >
-          {{ bullet.title }}
+      <!-- Bullets -->
+      <ul
+        v-if="section.type === 'bullets'"
+        class="pl-4 list-disc list-outside text-lg"
+      >
+        <li v-for="(bullet, i) in section.bullets" :key="i" class="py-2">
+          <template v-if="typeof bullet === 'string'">
+            <span v-html="bullet"></span>
+          </template>
+          <template v-else>
+            <b>{{ bullet.title }}</b> <span v-html="bullet.content"></span>
+          </template>
         </li>
       </ul>
-    </div>
-
-    <!-- Topics of Interest -->
-    <div
-      v-if="projekt.topicsOfInterest"
-      class="bg-gray-50 p-6 rounded-lg shadow-md"
-    >
-      <h2 class="text-2xl tracking-widest mb-4">Topics of Interest</h2>
-      <p class="mb-4 leading-relaxed">{{ projekt.topicsOfInterest.text }}</p>
-      <ul class="pl-4 list-disc list-outside text-lg">
-        <li
-          v-for="(bullet, index) in projekt.topicsOfInterest.bullets"
-          :key="index"
-          class="py-2"
-        >
-          <b>{{ bullet.title }}: </b>{{ bullet.content }}
-        </li>
-      </ul>
-    </div>
-
-    <!-- Organizers Section -->
-    <div
-      v-if="projekt.organizers && projekt.organizers.length"
-      class="bg-gray-50 p-6 rounded-lg shadow-md"
-    >
-      <h2 class="text-2xl tracking-widest mb-4">Organizers</h2>
-      <ul class="list-none space-y-4">
-        <li
-          v-for="(organizer, index) in projekt.organizers"
-          :key="index"
-          class="py-2"
-        >
+      <!-- People -->
+      <ul v-if="section.type === 'people'" class="list-none space-y-4">
+        <li v-for="(person, i) in section.items" :key="i" class="py-2">
           <p class="text-justify">
-            <b>{{ organizer.name }}</b> {{ organizer.description }}
+            <b>{{ person.name }}</b> ({{ person.affiliation }})
+            {{ person.description }}
           </p>
         </li>
       </ul>
+      <!-- Presentation -->
+      <div v-if="section.type === 'presentation'" class="space-y-10">
+        <div v-for="(presentation, i) in section.items" :key="i" class="mb-10">
+          <div class="text-xl font-bold">
+            {{ presentation.title }}
+          </div>
+          <div class="text-m mb-4 text-gray-700 italic">
+            {{ presentation.authors }}
+          </div>
+          <div v-if="Array.isArray(presentation.description)">
+            <ul
+              class="pl-4 list-disc list-outside text-base space-y-2 text-gray-800"
+            >
+              <li v-for="(desc, j) in presentation.description" :key="j">
+                {{ desc.content }}
+              </li>
+            </ul>
+          </div>
+          <div v-else>
+            <span v-html="presentation.description"></span>
+          </div>
+          <div v-if="presentation.link" class="mt-2">
+            <a
+              :href="presentation.link"
+              target="_blank"
+              rel="noopener"
+              class="text-custom-red"
+            >
+              Link to publication
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -149,9 +120,13 @@
 <script>
 import { research } from "@/data/researchData.json";
 import { slugify } from "@/utils/slugify";
+import PhotoGallery from "@/components/PhotoGallery.vue";
 
 export default {
   name: "ProjektDetailPage",
+  components: {
+    PhotoGallery,
+  },
   data() {
     return {
       projekt: research.find(
@@ -175,7 +150,7 @@ export default {
 };
 </script>
 <style>
-h2 {
+.text-custom-red {
   color: #740712;
 }
 </style>

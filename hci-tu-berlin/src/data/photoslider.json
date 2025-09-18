@@ -80,5 +80,34 @@
         "orientation": "portrait"
       }
     ]
+  },
+  {
+    "title": "Insights",
+    "items": [
+      {
+      "src": "/assets/photoSlider/muc2025/muc2025-1.jpg",
+      "caption": "insights from MuC 2025",
+      "type": "image",
+      "orientation": "landscape"
+    },
+    {
+      "src": "/assets/photoSlider/muc2025/muc2025-2.jpg",
+      "caption": "insights from MuC 2025",
+      "type": "image",
+      "orientation": "landscape"
+    },
+    {
+      "src": "/assets/photoSlider/muc2025/muc2025-3.jpg",
+      "caption": "insights from MuC 2025",
+      "type": "image",
+      "orientation": "landscape"
+    },
+    {
+      "src": "/assets/photoSlider/muc2025/muc2025-5.jpg",
+      "caption": "insights from MuC 2025",
+      "type": "image",
+      "orientation": "landscape"
+    }
+    ]
   }
 ]
