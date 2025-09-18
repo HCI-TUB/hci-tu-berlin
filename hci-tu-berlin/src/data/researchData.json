@@ -5,6 +5,12 @@
       "title": "MuC 2025 Workshop - Embedding HCI in the Real World",
       "subtitle": "Strategies for Recruitment and Field Research on Collaboration in Hybrid Spaces",
       "description": "We invite researchers, practitioners, and academics from diverse sectors to participate in our workshop on field studies with emerging technologies in collaborative, hybrid spaces. The workshop will focus on recruitment, methodologies, challenges, regulatory considerations, and future applications in this domain. We aim to foster discussions and networking opportunities among experts and newcomers alike. The workshop will feature lightning talks, discussions, and a participatory design session to explore different perspectives on conducting field studies in collaborative work settings. Selected submissions will be presented as 5-minute lightning talks followed by 5-minute discussions.",
+       "relatedProjects": [
+    {
+      "title": "See workshop reflection:",
+      "linkTitle": "Reflections from MuC 2025: Field Research in HCI"
+    }
+      ],
       "media": [],
       "dates": [
         { "label": "Submission Deadline", "value": "29.06.2025" },
@@ -148,6 +154,12 @@
       "title": "Reflections from MuC 2025: Field Research in HCI",
       "subtitle": "Challenges, Methods, and Future Directions",
       "description": "The MuC 2025 workshop examined the importance of field  research in HCI and ways to enhance current methods. Topics such as recruitment, inclusivity, and ethics were discussed. In group sessions, participants explored strategies for community engagement, ways to deal with setbacks in research practice, and structural challenges such as funding and regulation. ",
+      "relatedProjects": [
+    {
+      "title": "See workshop details:",
+      "linkTitle": "MuC 2025 Workshop - Embedding HCI in the Real World"
+    }
+  ],
       "media": [],
       "photos": [ {
         "title": "",

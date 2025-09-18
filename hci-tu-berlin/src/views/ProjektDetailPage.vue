@@ -10,7 +10,31 @@
       </div>
       <p class="text-justify">{{ projekt.description }}</p>
     </div>
-
+    <div
+      v-if="projekt.relatedProjects && projekt.relatedProjects.length"
+      class="mb-4"
+    >
+      <h3 class="text-lg font-semibold mb-2"></h3>
+      <div
+        v-if="projekt.relatedProjects && projekt.relatedProjects.length"
+        class="mb-4"
+      >
+        <ul>
+          <li v-for="related in projekt.relatedProjects" :key="related.title">
+            {{ related.title }}
+            <router-link
+              :to="{
+                name: 'ProjektDetailPage',
+                params: { title: slugify(related.linkTitle) },
+              }"
+              class="text-custom-red underline"
+            >
+              {{ related.linkTitle }}
+            </router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
     <!-- PhotoGallery below title/description -->
     <PhotoGallery
       v-if="
@@ -134,6 +158,14 @@ export default {
       ),
     };
   },
+  watch: {
+    "$route.params.title": {
+      immediate: true,
+      handler(newTitle) {
+        this.projekt = research.find((p) => slugify(p.title) === newTitle);
+      },
+    },
+  },
   methods: {
     goBack() {
       this.$router.push({ name: "ProjektePage" });
@@ -145,6 +177,9 @@ export default {
       } else {
         video.pause();
       }
+    },
+    slugify(str) {
+      return slugify(str);
     },
   },
 };
