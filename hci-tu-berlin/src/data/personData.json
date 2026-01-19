@@ -189,26 +189,6 @@
     },
     {
       "id": "6",
-      "name": "Thekla Mayer",
-      "email": "t.mayer@campus.tu-berlin.de",
-      "room": "EN-362",
-      "officeHours": "",
-      "description": "Working student at HCI Lab. B.Sc. in Computer Science",
-      "photo": "/people/thekla.jpg",
-      "cv": []
-    },
-    {
-      "id": "7",
-      "name": "Tessa Billens",
-      "email": "t.billens@campus.tu-berlin.de",
-      "room": "EN-362",
-      "officeHours": "",
-      "description": "Working student at HCI Lab. B.Sc. in Media Computer Science",
-      "photo": "/people/tessa.jpg",
-      "cv": []
-    },
-    {
-      "id": "8",
       "name": "Cosima Holler",
       "email": "c.holler@campus.tu-berlin.de",
       "room": "EN-362",
