@@ -3,7 +3,7 @@
     class="relative w-64 aspect-[3/4] sm:w-48 md:w-56 lg:w-64 cursor-pointer"
     @click="goToDetail"
   >
-    <img v-if="photo" :src="photo" alt="" class="w-full h-full object-cover" />
+    <img v-if="image" :src="image" alt="" class="w-full h-full object-cover" />
     <div
       class="absolute inset-0 flex flex-col items-center justify-center bg-gray-800 bg-opacity-75 text-white opacity-0 hover:opacity-100 transition-opacity duration-300"
     >
@@ -30,7 +30,7 @@ export default {
       required: false,
       default: "",
     },
-    photo: {
+    image: {
       type: String,
       default: null,
     },

@@ -10,32 +10,28 @@
     >
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
         <PersonCard
-          v-for="person in persons"
-          :key="person.id"
-          :name="person.name"
-          :photo="person.photo"
-          :email="person.email"
-          :description="person.description"
-          :id="person.id"
+          v-for="member in teamMembers"
+          :key="member.id"
+          :name="member.name"
+          :image="member.image"
+          :email="member.email"
+          :description="member.role"
+          :id="member.id"
         ></PersonCard>
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
+import { onMounted } from "vue";
 import PersonCard from "@/components/PersonCard.vue";
-import { persons } from "@/data/personData.json";
+import { useTeam } from "@/composables/teamComposable";
 
-export default {
-  name: "PersonenPage",
-  components: {
-    PersonCard,
-  },
-  data() {
-    return {
-      persons,
-    };
-  },
-};
+const { teamMembers, refetch } = useTeam();
+
+onMounted(() => {
+  console.log("Fetching team members...");
+  refetch();
+});
 </script>

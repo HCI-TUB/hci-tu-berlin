@@ -4,7 +4,7 @@
     "description": "Your project description",
     "main": "index.js",
     "scripts": {
-        "start": "node fetchID.js"
+        "start": "node server.js"
     },
     "dependencies": {
         "axios": "^1.11.0",

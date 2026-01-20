@@ -1,60 +1,38 @@
 <template>
-  <div>
+  <div class="text-left w-full p-4">
     <h1 class="text-3xl text-left mb-8 tracking-widest">Contact</h1>
+    <div v-if="loading">Loading...</div>
+    <div v-else-if="pageData" v-for="(item, index) in pageData" :key="index">
+      <div>
+        <ul class="space-y-1 mb-4">
+          <li>
+            <h4 class="text-2xl text-left tracking-widest mb-2">
+              {{ item.title }}
+            </h4>
+          </li>
+          <li v-for="(line, index) in splitLines(item.content)" :key="index">
+            <span v-for="(part, idx) in parseLine(line)" :key="idx">
+              <!-- Email -->
+              <a
+                v-if="part.type === 'email'"
+                :href="`mailto:${part.value}`"
+                class="text-custom-red hover:text-custom-red-dark"
+              >
+                {{ part.value }}
+              </a>
 
-    <div>
-      <ul class="list-none text-left">
-        <li>
-          <h4 class="text-2xl text-left tracking-widest mb-2">Secretary</h4>
-        </li>
-        <li>Özlem Ocak</li>
-        <li>
-          <a
-            class="text-custom-red hover:text-custom-red-dark"
-            href="mailto:ocak@tu-berlin.de"
-            >ocak@tu-berlin.de</a
-          >
-        </li>
-      </ul>
-    </div>
-
-    <div class="mt-6">
-      <ul class="list-none text-left">
-        <li>
-          <h4 class="text-2xl text-left tracking-widest mb-2">Applications</h4>
-        </li>
-        <li>
-          Please send inquiries and applications to
-          <a
-            class="text-custom-red hover:text-custom-red-dark"
-            href="mailto:admin@hci.tu-berlin.de"
-            >admin@hci.tu-berlin.de</a
-          >.
-        </li>
-        <li class="mt-2">
-          For a virtual consultation hour with Prof. George, sign up
-          <a
-            class="text-custom-red hover:text-custom-red-dark"
-            href="https://isis.tu-berlin.de/mod/organizer/view.php?id=2008365"
-            target="_blank"
-            rel="noopener noreferrer"
-            >here</a
-          >.
-        </li>
-      </ul>
-    </div>
-
-    <div class="mt-6">
-      <h4 class="text-2xl text-left tracking-widest mb-2">Mailing Address</h4>
-      <ul class="list-none text-left">
-        <li>Einsteinufer 17, 10587 Berlin</li>
-      </ul>
+              <span v-else>
+                {{ part.value }}
+              </span>
+            </span>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="mt-6">
       <StreetMap :latitude="52.515031" :longitude="13.32682" />
     </div>
   </div>
-
   <div class="flex items-center">
     <img class="w-8 mr-2" src="/assets/hci-logo.jpg" alt="hci logo" />
     <p class="text-justify text-lg my-2">
@@ -68,10 +46,16 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import StreetMap from "@/components/StreetMap.vue";
+import { onMounted } from "vue";
+import { usePageData } from "@/composables/pageComposable";
+import { splitLines, parseLine } from "@/utils/dataFormatter.js";
 
-export default {
-  components: { StreetMap },
-};
+const { pageData, loading, refetch } = usePageData("contact");
+
+onMounted(() => {
+  console.log("Fetching page data...");
+  refetch();
+});
 </script>

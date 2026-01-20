@@ -1,13 +1,14 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import AboutPage from "./views/AboutPage.vue";
 import PersonenPage from "./views/PersonenPage.vue";
-import LehrePage from "./views/LehrePage.vue";
 import ProjektePage from "./views/ProjektePage.vue";
 import PersonDetailPage from "./views/PersonDetailPage.vue";
 import PublicationsPage from "./views/PublicationsPage.vue";
 import ContactPage from "./views/ContactPage.vue";
 import ProjektDetailPage from "./views/ProjektDetailPage.vue";
 import ThesisPage from "./views/ThesisPage.vue";
+import EventsPage from "./views/EventsPage.vue";
+import EventDetailPage from "./views/EventDetailPage.vue";
 
 const routes = [
   { path: "/", component: AboutPage },
@@ -20,11 +21,21 @@ const routes = [
     props: true,
     component: ProjektDetailPage,
   },
-  { path: "/teaching", component: LehrePage },
   { path: "/publications", component: PublicationsPage },
-  { path: "/people/:id", name: "PersonDetailPage", component: PersonDetailPage },
+  {
+    path: "/people/:id",
+    name: "PersonDetailPage",
+    component: PersonDetailPage,
+  },
   { path: "/contact", component: ContactPage },
-  {path: '/theses', name:"ThesisPage", component: ThesisPage},
+  { path: "/theses", name: "ThesisPage", component: ThesisPage },
+  { path: "/events", name: "EventsPage", component: EventsPage },
+  {
+    path: "/events/:title",
+    name: "EventDetailPage",
+    props: true,
+    component: EventDetailPage,
+  },
 ];
 
 const router = createRouter({

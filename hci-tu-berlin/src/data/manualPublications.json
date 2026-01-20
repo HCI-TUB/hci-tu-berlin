@@ -30,5 +30,17 @@
     "publicationVenue": "{}",
     "pages": "1-2",
     "description": "This poster presents an extended reality remote collaboration system using AR-based indoor navigation for on-site and a BIM-based VR system for remote users. A user study with ten participants (five pairs) provides initial insights into usability and preferences for collaborative tools."
+  },
+  {
+    "id": "manual-4",
+    "title": "Exploring an XR Indoor Navigation System for Remote Collaboration",
+    "authors": "[{\"name\": \"Ceenu George\"},{\"name\": \"Rishab Bhattacharyya\"}, {\"name\": \"Linda Hirsch\"}, {\"name\": \"Leif Oppermann\"}]",
+    "externalIds": "{}",
+    "publicationDate": "2024-10-09",
+    "venue": "Proceedings of the 30th ACM Symposium on Virtual Reality Software and Technology",
+    "openAccessPdf": "null",
+    "publicationVenue": "{}",
+    "pages": "1-2",
+    "description": "This poster presents an extended reality remote collaboration system using AR-based indoor navigation for on-site and a BIM-based VR system for remote users. A user study with ten participants (five pairs) provides initial insights into usability and preferences for collaborative tools."
   }
 ]

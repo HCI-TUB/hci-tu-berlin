@@ -89,19 +89,37 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
-import photoSliderData from "@/data/photoslider.json";
+import { ref, computed, onMounted, toRaw } from "vue";
+import { useGalleryData } from "@/composables/galleryComposable";
 
+onMounted(() => {
+  console.log("Fetching photo gallery data...");
+  refetch();
+});
 const props = defineProps({
   titles: {
     type: Array,
     required: true,
   },
 });
+const { galleryData, refetch } = useGalleryData(props.titles[0]);
 
-const groups = computed(() =>
-  photoSliderData.filter((group) => props.titles.includes(group.title))
+const groups = computed(
+  () => {
+    const plainArray = toRaw(galleryData.value);
+    return parseGalleryData(plainArray, props.titles);
+  }
+  // galleryData.filter((group) => props.titles.includes(group.title))
 );
+
+const parseGalleryData = (plainArray, titles) => {
+  if (plainArray?.length > 0 && titles[0].length > 0) {
+    const data = plainArray.filter((group) => titles.includes(group.title));
+    return data;
+  } else {
+    return [];
+  }
+};
 
 const viewer = ref({
   open: false,
@@ -134,8 +152,7 @@ function next() {
 }
 
 const currentItem = computed(() => {
-  if (!viewer.value.open) return {};
   const group = groups.value[viewer.value.groupIndex];
-  return group.items[viewer.value.itemIndex];
+  return group.items[viewer.value.itemIndex]; // ← Returns the actual ITEM
 });
 </script>
