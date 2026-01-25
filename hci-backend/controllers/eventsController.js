@@ -5,7 +5,9 @@ const { replaceAssetUrlsInContent } = require("../utils/URLHelper");
 class EventsController {
   static async getEventsData(req, res, next) {
     try {
-      const eventsData = await EventsModel.getEventsData(req.params.id);
+      const lang = req.lang;
+      console.log("Requested language:", lang);
+      const eventsData = await EventsModel.getEventsData(req.params.id, lang);
       eventsData[0].forEach((events) => {
         if (events.content) {
           events.content = replaceAssetUrlsInContent(req, events.content);

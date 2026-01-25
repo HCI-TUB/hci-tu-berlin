@@ -39,6 +39,31 @@
           >Contact</router-link
         >
       </nav>
+      <div class="flex items-center gap-2 text-sm">
+        <button
+          @click="setLanguage('en')"
+          :class="[
+            'px-2 py-1 rounded transition-colors',
+            currentLang === 'en'
+              ? 'bg-red-600 text-white font-semibold'
+              : 'text-gray-600 hover:text-red-600',
+          ]"
+        >
+          EN
+        </button>
+        <span class="text-gray-400">|</span>
+        <button
+          @click="setLanguage('de')"
+          :class="[
+            'px-2 py-1 rounded transition-colors',
+            currentLang === 'de'
+              ? 'bg-red-600 text-white font-semibold'
+              : 'text-gray-600 hover:text-red-600',
+          ]"
+        >
+          DE
+        </button>
+      </div>
     </aside>
 
     <main class="flex-1 w-full px-4 mr-20 ml-20 md:px-0">
@@ -221,9 +246,11 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
+import { computed, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { useEventsData } from "@/composables/eventsComposable";
+import { currentLang } from "@/i18n/lang";
+import { i18n } from "@/i18n";
 
 const router = useRouter();
 
@@ -237,6 +264,13 @@ onMounted(() => {
   refetchEvents();
 });
 
+const setLanguage = (lang) => {
+  localStorage.setItem("lang", lang);
+  currentLang.value = lang;
+  i18n.global.locale.value = lang;
+  router.go(0);
+};
+
 const upcomingEvents = computed(() => {
   if (!eventsData.value) return [];
 
@@ -244,7 +278,7 @@ const upcomingEvents = computed(() => {
     ? eventsData.value[0]
     : eventsData.value;
 
-  return events.filter((event) => event.is_active === 1).slice(0, 3);
+  return events.filter((event) => event.is_active === 1 || true).slice(0, 3);
 });
 
 const getEventDate = (event) => {

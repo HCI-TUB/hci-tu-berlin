@@ -9,6 +9,7 @@ const researchRoutes = require("./routes/researchRoutes");
 const eventsRoutes = require("./routes/eventsRoutes");
 const publicationsRoutes = require("./routes/publicationsRoutes");
 const errorHandler = require("./middleware/errorHandler");
+const { languageMiddleware } = require("./middleware/language.middleware");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -16,6 +17,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(languageMiddleware);
 
 app.use("/images", express.static(path.join(__dirname, "assets/images")));
 app.use(
