@@ -5,7 +5,9 @@ const { replaceAssetUrlsInContent } = require("../utils/URLHelper");
 class PageController {
   static async getPageData(req, res, next) {
     try {
-      const pageData = await PageModel.getPageData(req.params.slug);
+      const lang = req.lang;
+      console.log("Requested language:", lang);
+      const pageData = await PageModel.getPageData(req.params.slug, lang);
 
       pageData[0].forEach((page) => {
         if (page.content) {

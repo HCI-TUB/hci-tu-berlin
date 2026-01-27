@@ -5,7 +5,12 @@ const { replaceAssetUrlsInContent } = require("../utils/URLHelper");
 class ResearchController {
   static async getResearchData(req, res, next) {
     try {
-      const researchData = await ResearchModel.getResearchData(req.params.id);
+      const lang = req.lang;
+      console.log("Requested language:", lang);
+      const researchData = await ResearchModel.getResearchData(
+        req.params.id,
+        lang,
+      );
 
       researchData[0].forEach((research) => {
         if (research.content) {

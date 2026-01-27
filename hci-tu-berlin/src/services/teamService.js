@@ -1,16 +1,13 @@
-import axios from "axios";
-
-const API_BASE_URL =
-  import.meta.env.VITE_API_URL || "http://localhost:3000/api";
+import http from "@/api/http";
 
 export default class TeamService {
   static async getTeamMembers() {
-    const response = await axios.get(`${API_BASE_URL}/team`);
+    const response = await http.get(`/team`);
     return response.data.data;
   }
 
   static async getTeamMemberById(id) {
-    const response = await axios.get(`${API_BASE_URL}/team/${id}`);
+    const response = await http.get(`/team/${id}`);
     return response.data;
   }
 }

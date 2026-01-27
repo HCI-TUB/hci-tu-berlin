@@ -4,7 +4,9 @@ class PublicationsController {
   // Get all publications data
   static async getAllPublications(req, res, next) {
     try {
-      const data = await PublicationsModel.getAllPublicationsData();
+      const lang = req.lang;
+      console.log("Requested language:", lang);
+      const data = await PublicationsModel.getAllPublicationsData(lang);
       res.json({
         success: true,
         data,

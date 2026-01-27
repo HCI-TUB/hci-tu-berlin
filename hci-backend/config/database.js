@@ -9,6 +9,7 @@ const pool = mysql.createPool({
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
+  multipleStatements: true,
   typeCast: function (field, next) {
     if (field.type === "BIT" && field.length === 1) {
       const bytes = field.buffer();

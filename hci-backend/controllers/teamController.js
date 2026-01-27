@@ -4,7 +4,9 @@ const { buildAssetUrl } = require("../utils/URLHelper");
 class TeamController {
   static async getAllTeamMembers(req, res, next) {
     try {
-      const members = await TeamModel.getAllTeamMembers();
+      const lang = req.lang;
+      console.log("Requested language:", lang);
+      const members = await TeamModel.getAllTeamMembers(lang);
 
       const membersWithUrls = members[0].map((member) => ({
         ...member,
@@ -22,7 +24,9 @@ class TeamController {
 
   static async getTeamMemberById(req, res, next) {
     try {
-      const memberData = await TeamModel.getTeamMemberById(req.params.id);
+      const lang = req.lang;
+      console.log("Requested language:", lang);
+      const memberData = await TeamModel.getTeamMemberById(req.params.id, lang);
 
       if (!memberData || memberData[0].length === 0) {
         return res.status(404).json({
