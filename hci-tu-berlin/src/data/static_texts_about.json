@@ -1,0 +1,34 @@
+[
+  {
+    "language": "en",
+    "welcomeHeading": "Welcome to the Human-Computer Interaction Lab",
+    "loadingPage": "Loading page content...",
+    "followInstagram": "Follow us on Instagram",
+    "featuredProjectsHeading": "Featured Projects",
+    "loadingProjects": "Loading projects...",
+    "learnMoreProject": "Learn more about this project →",
+    "thesesHeading": "Bachelor & Master Theses",
+    "thesesText": "We regularly supervise bachelor's and master's theses on topics such as\nusable security, cross-reality interaction, and inclusive design. Find\nout more about the process and potential topics.",
+    "learnMoreTheses": "Learn more about theses →",
+    "impressionsHeading": "Impressions from our Lab",
+    "photoSliderTitles": ["Events"],
+    "featuredProjectNo": "No featured project available",
+    "hciLogoAlt": "HCI Logo"
+  },
+  {
+    "language": "de",
+    "welcomeHeading": "Willkommen im Labor für Mensch-Computer-Interaktion",
+    "loadingPage": "Lade Seiteninhalt...",
+    "followInstagram": "Folgen Sie uns auf Instagram",
+    "featuredProjectsHeading": "Ausgewählte Projekte",
+    "loadingProjects": "Projekte werden geladen...",
+    "learnMoreProject": "Mehr über dieses Projekt erfahren →",
+    "thesesHeading": "Bachelor- & Masterarbeiten",
+    "thesesText": "Wir betreuen regelmäßig Bachelor- und Masterarbeiten zu Themen wie\nusable security, Cross-Reality-Interaktion und inklusivem Design. Erfahren\nSie mehr zum Ablauf und möglichen Themen.",
+    "learnMoreTheses": "Mehr zu Abschlussarbeiten →",
+    "impressionsHeading": "Eindrücke aus unserem Labor",
+    "photoSliderTitles": ["Events"],
+    "featuredProjectNo": "Kein ausgewähltes Projekt verfügbar",
+    "hciLogoAlt": "HCI-Logo"
+  }
+]

@@ -24,6 +24,7 @@ app.use(
   "/photoSlider",
   express.static(path.join(__dirname, "assets/photoSlider")),
 );
+app.use(express.static("static"));
 // Routes
 app.use("/api/team", teamRoutes);
 app.use("/api/page", pageRoutes);

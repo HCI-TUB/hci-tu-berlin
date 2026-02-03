@@ -1,11 +1,16 @@
 <template>
   <div class="w-full px-0 lg:px-8 space-y-8">
     <div class="md:text-4xl sm:text-3xl text-left tracking-wide my-8">
-      Welcome to the Human-Computer Interaction Lab
+      {{
+        currentAbout.welcomeHeading ||
+        "Welcome to the Human-Computer Interaction Lab"
+      }}
     </div>
 
     <!-- Page Content -->
-    <div v-if="loading">Loading page content...</div>
+    <div v-if="loading">
+      {{ currentAbout.loadingPage || "Loading page content..." }}
+    </div>
     <div v-else-if="pageData && pageData.length">
       <div v-for="(item, index) in pageData" :key="index">
         <div class="text-justify w-full text-lg">
@@ -91,14 +96,18 @@
     <div
       class="flex flex-col items-center sm:flex-row sm:items-start mt-4 space-y-4 sm:space-y-0 sm:space-x-4"
     >
-      <img class="w-16 sm:w-8" src="/assets/hci-logo.jpg" alt="HCI Logo" />
+      <img
+        class="w-16 sm:w-8"
+        src="/assets/hci-logo.jpg"
+        :alt="currentAbout.hciLogoAlt || 'HCI Logo'"
+      />
       <p class="text-justify text-lg">
         <a
           class="hover:text-custom-red"
           href="https://www.instagram.com/hci_tuberlin/"
           target="_blank"
         >
-          Follow us on Instagram
+          {{ currentAbout.followInstagram || "Follow us on Instagram" }}
         </a>
       </p>
     </div>
@@ -106,12 +115,12 @@
     <hr class="my-4" />
 
     <div class="md:text-2xl sm:text-xl tracking-wide text-left my-8 font-bold">
-      Featured Projects
+      {{ currentAbout.featuredProjectsHeading || "Featured Projects" }}
     </div>
 
     <!-- Featured Project Section -->
     <div v-if="researchLoading" class="text-center py-10">
-      <p>Loading projects...</p>
+      <p>{{ currentAbout.loadingProjects || "Loading projects..." }}</p>
     </div>
     <div
       v-else-if="featuredProject"
@@ -132,30 +141,35 @@
       </router-link>
     </div>
     <div v-else class="bg-gray-50 p-6 rounded-lg shadow-md">
-      <p class="text-gray-600">No featured project available</p>
+      <p class="text-gray-600">
+        {{ currentAbout.featuredProjectNo || "No featured project available" }}
+      </p>
     </div>
 
     <!-- Thesis Featured Project Preview -->
     <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:bg-red-50">
-      <h3 class="text-xl font-semibold mb-2">Bachelor & Master Theses</h3>
+      <h3 class="text-xl font-semibold mb-2">
+        {{ currentAbout.thesesHeading || "Bachelor & Master Theses" }}
+      </h3>
       <p class="md:text-justify text-left mb-4">
-        We regularly supervise bachelor's and master's theses on topics such as
-        usable security, cross-reality interaction, and inclusive design. Find
-        out more about the process and potential topics.
+        {{
+          currentAbout.thesesText ||
+          "We regularly supervise bachelor's and master's theses on topics such as usable security, cross-reality interaction, and inclusive design. Find out more about the process and potential topics."
+        }}
       </p>
       <router-link
         :to="{ name: 'ThesisPage' }"
         class="text-custom-red hover:underline"
       >
-        Learn more about theses →
+        {{ currentAbout.learnMoreTheses || "Learn more about theses →" }}
       </router-link>
     </div>
 
     <!-- Photo Slider -->
     <div class="md:text-2xl sm:text-xl tracking-wide text-left my-8 font-bold">
-      Impressions from our Lab
+      {{ currentAbout.impressionsHeading || "Impressions from our Lab" }}
     </div>
-    <PhotoSlider :titles="['Events']" />
+    <PhotoSlider :titles="currentAbout.photoSliderTitles || ['Events']" />
   </div>
 </template>
 
@@ -165,6 +179,7 @@ import { usePageData } from "@/composables/pageComposable";
 import { useResearchData } from "@/composables/researchComposable";
 import { splitLines, parseLine, isBulletList } from "@/utils/dataFormatter.js";
 import PhotoSlider from "@/components/PhotoSlider.vue";
+import { useAboutTexts } from "@/composables/aboutTextComposable";
 
 const { pageData, loading, refetch } = usePageData("about");
 const {
@@ -173,9 +188,11 @@ const {
   refetch: refetchResearch,
 } = useResearchData(null);
 
+const { current: currentAbout, loadTexts: loadAboutTexts } = useAboutTexts();
+
 onMounted(async () => {
   console.log("Fetching page data...");
-  await Promise.all([refetch(), refetchResearch()]);
+  await Promise.all([refetch(), refetchResearch(), loadAboutTexts()]);
 });
 
 const featuredProject = computed(() => {

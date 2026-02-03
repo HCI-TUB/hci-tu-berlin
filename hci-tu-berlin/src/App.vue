@@ -9,35 +9,49 @@
         <img
           class="w-16 md:w-20 mx-auto md:mx-0"
           src="./assets/TU-Berlin-Logo.png"
-          alt="tu-logo"
+          :alt="currentTexts.logoAlt || 'tu-logo'"
         />
         <router-link to="/" class="tracking-widest text-xl md:text-2xl">
-          Human Computer Interaction
+          {{ currentTexts.siteTitle || "Human Computer Interaction" }}
         </router-link>
-        <div>at TU Berlin</div>
+        <div>{{ currentTexts.siteSubtitle || "at TU Berlin" }}</div>
       </div>
       <nav
         class="flex flex-col gap-4 items-center md:items-start text-center md:text-left text-xl md:text-2xl"
       >
-        <router-link to="/" class="hover:text-custom-red">About</router-link>
-        <router-link to="/projects" class="hover:text-custom-red"
-          >Research</router-link
+        <template
+          v-if="currentTexts && currentTexts.nav && currentTexts.nav.length"
         >
-        <router-link to="/people" class="hover:text-custom-red"
-          >People</router-link
-        >
-        <router-link to="/events" class="hover:text-custom-red"
-          >Events</router-link
-        >
-        <router-link to="/theses" class="hover:text-custom-red"
-          >Theses</router-link
-        >
-        <router-link to="/publications" class="hover:text-custom-red"
-          >Publications</router-link
-        >
-        <router-link to="/contact" class="hover:text-custom-red"
-          >Contact</router-link
-        >
+          <router-link
+            v-for="item in currentTexts.nav"
+            :key="item.link"
+            :to="item.link"
+            class="hover:text-custom-red"
+          >
+            {{ item.label }}
+          </router-link>
+        </template>
+        <template v-else>
+          <router-link to="/" class="hover:text-custom-red">About</router-link>
+          <router-link to="/projects" class="hover:text-custom-red"
+            >Research</router-link
+          >
+          <router-link to="/people" class="hover:text-custom-red"
+            >People</router-link
+          >
+          <router-link to="/events" class="hover:text-custom-red"
+            >Events</router-link
+          >
+          <router-link to="/theses" class="hover:text-custom-red"
+            >Theses</router-link
+          >
+          <router-link to="/publications" class="hover:text-custom-red"
+            >Publications</router-link
+          >
+          <router-link to="/contact" class="hover:text-custom-red"
+            >Contact</router-link
+          >
+        </template>
       </nav>
       <div class="flex items-center gap-2 text-sm">
         <button
@@ -136,7 +150,9 @@
         </router-link>
       </div> -->
       <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-red-600">
-        <h3 class="text-xl font-bold mb-4 text-gray-800">Upcoming Events</h3>
+        <h3 class="text-xl font-bold mb-4 text-gray-800">
+          {{ currentTexts.rightSidebar?.heading || "Upcoming Events" }}
+        </h3>
         <div v-if="eventsLoading" class="text-center py-4">
           <div
             class="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600 mx-auto"
@@ -167,10 +183,10 @@
         </div>
 
         <router-link
-          to="/events"
+          :to="currentTexts.rightSidebar?.eventsLinkPath || '/events'"
           class="text-custom-red hover:underline text-sm font-semibold mt-4 inline-block"
         >
-          View all events →
+          {{ currentTexts.rightSidebar?.eventsLink || "View all events →" }}
         </router-link>
       </div>
 
@@ -204,41 +220,64 @@
       <div
         class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg shadow-md p-6"
       >
-        <h3 class="text-xl font-bold mb-4 text-gray-800">Quick Links</h3>
+        <h3 class="text-xl font-bold mb-4 text-gray-800">
+          {{ currentTexts.quickLinks?.heading || "Quick Links" }}
+        </h3>
         <ul class="space-y-2">
-          <li>
-            <router-link
-              to="/theses"
-              class="text-gray-700 hover:text-custom-red text-sm flex items-center gap-2"
-            >
-              <span>→</span> Apply for Thesis
-            </router-link>
-          </li>
-          <li>
-            <router-link
-              to="/join"
-              class="text-gray-700 hover:text-custom-red text-sm flex items-center gap-2"
-            >
-              <span>→</span> Join Our Lab
-            </router-link>
-          </li>
-          <li>
-            <router-link
-              to="/collaboration"
-              class="text-gray-700 hover:text-custom-red text-sm flex items-center gap-2"
-            >
-              <span>→</span> Collaboration Inquiries
-            </router-link>
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/hci_tuberlin/"
-              target="_blank"
-              class="text-gray-700 hover:text-custom-red text-sm flex items-center gap-2"
-            >
-              <span>→</span> Follow on Instagram
-            </a>
-          </li>
+          <template
+            v-if="
+              currentTexts.quickLinks &&
+              currentTexts.quickLinks.links &&
+              currentTexts.quickLinks.links.length
+            "
+          >
+            <li v-for="link in currentTexts.quickLinks.links" :key="link.link">
+              <component
+                :is="link.link.startsWith('http') ? 'a' : 'router-link'"
+                :to="!link.link.startsWith('http') ? link.link : undefined"
+                :href="link.link.startsWith('http') ? link.link : undefined"
+                target="_blank"
+                class="text-gray-700 hover:text-custom-red text-sm flex items-center gap-2"
+              >
+                <span>→</span> {{ link.label }}
+              </component>
+            </li>
+          </template>
+          <template v-else>
+            <li>
+              <router-link
+                to="/theses"
+                class="text-gray-700 hover:text-custom-red text-sm flex items-center gap-2"
+              >
+                <span>→</span> Apply for Thesis
+              </router-link>
+            </li>
+            <li>
+              <router-link
+                to="/join"
+                class="text-gray-700 hover:text-custom-red text-sm flex items-center gap-2"
+              >
+                <span>→</span> Join Our Lab
+              </router-link>
+            </li>
+            <li>
+              <router-link
+                to="/collaboration"
+                class="text-gray-700 hover:text-custom-red text-sm flex items-center gap-2"
+              >
+                <span>→</span> Collaboration Inquiries
+              </router-link>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/hci_tuberlin/"
+                target="_blank"
+                class="text-gray-700 hover:text-custom-red text-sm flex items-center gap-2"
+              >
+                <span>→</span> Follow on Instagram
+              </a>
+            </li>
+          </template>
         </ul>
       </div>
     </aside>
@@ -251,6 +290,7 @@ import { useRouter } from "vue-router";
 import { useEventsData } from "@/composables/eventsComposable";
 import { currentLang } from "@/i18n/lang";
 import { i18n } from "@/i18n";
+import { useStaticTexts } from "@/composables/staticTextComposable";
 
 const router = useRouter();
 
@@ -260,8 +300,15 @@ const {
   refetch: refetchEvents,
 } = useEventsData();
 
+const {
+  current: currentTexts,
+  loadTexts,
+  loading: textsLoading,
+} = useStaticTexts();
+
 onMounted(() => {
   refetchEvents();
+  loadTexts();
 });
 
 const setLanguage = (lang) => {
