@@ -12,11 +12,11 @@ git pull
 
 # pnpm install --force
 
-cd "$SCRIPT_DIR/hci-backend"
+cd "$SCRIPT_DIR/backend"
 
 pnpm install --force
 
-cd "$SCRIPT_DIR/hci-tu-berlin"
+cd "$SCRIPT_DIR/frontend"
 
 pnpm install --force
 pnpm run build --emptyOutDir
