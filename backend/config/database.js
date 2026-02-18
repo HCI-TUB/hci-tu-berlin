@@ -1,0 +1,22 @@
+const mysql = require("mysql2/promise");
+
+const pool = mysql.createPool({
+  host: process.env.DB_HOST || "localhost",
+  port: process.env.DB_PORT || 3306,
+  user: process.env.DB_USER || "root",
+  password: process.env.DB_PASSWORD || "",
+  database: process.env.DB_NAME || "hci",
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+  multipleStatements: true,
+  typeCast: function (field, next) {
+    if (field.type === "BIT" && field.length === 1) {
+      const bytes = field.buffer();
+      return bytes ? bytes[0] === 1 : null;
+    }
+    return next();
+  },
+});
+
+module.exports = pool;

@@ -1,0 +1,64 @@
+[
+  {
+    "language": "en",
+    "siteTitle": "Human Computer Interaction",
+    "siteSubtitle": "at TU Berlin",
+    "logoAlt": "tu-logo",
+    "nav": [
+      { "label": "About", "link": "/" },
+      { "label": "Research", "link": "/projects" },
+      { "label": "People", "link": "/people" },
+      { "label": "Events", "link": "/events" },
+      { "label": "Theses", "link": "/theses" },
+      { "label": "Publications", "link": "/publications" },
+      { "label": "Contact", "link": "/contact" }
+    ],
+    "languageButtons": ["EN", "DE"],
+    "rightSidebar": {
+      "heading": "Upcoming Events",
+      "eventsLink": "View all events →",
+      "eventsLinkPath": "/events",
+      "emptyText": "No upcoming events"
+    },
+    "quickLinks": {
+      "heading": "Quick Links",
+      "links": [
+        { "label": "Apply for Thesis", "link": "/theses" },
+        { "label": "Join Our Lab", "link": "/join" },
+        { "label": "Collaboration Inquiries", "link": "/collaboration" },
+        { "label": "Follow on Instagram", "link": "https://www.instagram.com/hci_tuberlin/" }
+      ]
+    }
+  },
+  {
+    "language": "de",
+    "siteTitle": "Mensch-Computer-Interaktion",
+    "siteSubtitle": "an der TU Berlin",
+    "logoAlt": "tu-logo",
+    "nav": [
+      { "label": "Über uns", "link": "/" },
+      { "label": "Forschung", "link": "/projects" },
+      { "label": "Personen", "link": "/people" },
+      { "label": "Veranstaltungen", "link": "/events" },
+      { "label": "Abschlussarbeiten", "link": "/theses" },
+      { "label": "Publikationen", "link": "/publications" },
+      { "label": "Kontakt", "link": "/contact" }
+    ],
+    "languageButtons": ["EN", "DE"],
+    "rightSidebar": {
+      "heading": "Bevorstehende Veranstaltungen",
+      "eventsLink": "Alle Veranstaltungen anzeigen →",
+      "eventsLinkPath": "/events",
+      "emptyText": "Keine bevorstehenden Veranstaltungen"
+    },
+    "quickLinks": {
+      "heading": "Schnellzugriffe",
+      "links": [
+        { "label": "Für Abschlussarbeit bewerben", "link": "/theses" },
+        { "label": "Unserem Labor beitreten", "link": "/join" },
+        { "label": "Kooperationsanfragen", "link": "/collaboration" },
+        { "label": "Folgen auf Instagram", "link": "https://www.instagram.com/hci_tuberlin/" }
+      ]
+    }
+  }
+]
