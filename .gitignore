@@ -131,7 +131,7 @@ dist
 
 .DS_Store
 
-hci-backend/static/*
+backend/static/*
 
 # db creds
-hci-backend/config.json
+backend/config.json

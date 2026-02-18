@@ -10,7 +10,7 @@ git fetch
 git reset --hard origin/main
 git pull
 
-pnpm install --force
+# pnpm install --force
 
 cd "$SCRIPT_DIR/hci-backend"
 
