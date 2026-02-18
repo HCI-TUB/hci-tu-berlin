@@ -6,12 +6,12 @@ const buildAssetUrl = (req, assetPath) => {
     return assetPath;
   }
 
-  const baseUrl = `${req.protocol}://${req.get("host")}`;
+  //const baseUrl = `${req.protocol}://${req.get("host")}`;
 
   // Ensure path starts with /
   const path = assetPath.startsWith("/") ? assetPath : `/${assetPath}`;
   console.log("Processing gallery:", path);
-  return `${baseUrl}${path}`;
+  return `${path}`;
 };
 
 const replaceAssetUrlsInContent = (req, content) => {
@@ -20,7 +20,7 @@ const replaceAssetUrlsInContent = (req, content) => {
   // Find all paths like /images/..., /assets/..., /files/...
   return content.replace(
     /\/(images|assets|files|uploads|photoSlider)\/[^\s"')<]+/gi,
-    (match) => buildAssetUrl(req, match)
+    (match) => buildAssetUrl(req, match),
   );
 };
 
