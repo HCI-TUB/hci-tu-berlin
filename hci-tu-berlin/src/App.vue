@@ -236,7 +236,7 @@
                 :is="link.link.startsWith('http') ? 'a' : 'router-link'"
                 :to="!link.link.startsWith('http') ? link.link : undefined"
                 :href="link.link.startsWith('http') ? link.link : undefined"
-                target="_blank"
+                :target="link.link.startsWith('http') ? '_blank' : undefined"
                 class="text-gray-700 hover:text-custom-red text-sm flex items-center gap-2"
               >
                 <span>→</span> {{ link.label }}
@@ -250,22 +250,6 @@
                 class="text-gray-700 hover:text-custom-red text-sm flex items-center gap-2"
               >
                 <span>→</span> Apply for Thesis
-              </router-link>
-            </li>
-            <li>
-              <router-link
-                to="/join"
-                class="text-gray-700 hover:text-custom-red text-sm flex items-center gap-2"
-              >
-                <span>→</span> Join Our Lab
-              </router-link>
-            </li>
-            <li>
-              <router-link
-                to="/collaboration"
-                class="text-gray-700 hover:text-custom-red text-sm flex items-center gap-2"
-              >
-                <span>→</span> Collaboration Inquiries
               </router-link>
             </li>
             <li>
