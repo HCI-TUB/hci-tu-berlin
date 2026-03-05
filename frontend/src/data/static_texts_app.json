@@ -24,8 +24,6 @@
       "heading": "Quick Links",
       "links": [
         { "label": "Apply for Thesis", "link": "/theses" },
-        { "label": "Join Our Lab", "link": "/join" },
-        { "label": "Collaboration Inquiries", "link": "/collaboration" },
         { "label": "Follow on Instagram", "link": "https://www.instagram.com/hci_tuberlin/" }
       ]
     }
@@ -55,8 +53,6 @@
       "heading": "Schnellzugriffe",
       "links": [
         { "label": "Für Abschlussarbeit bewerben", "link": "/theses" },
-        { "label": "Unserem Labor beitreten", "link": "/join" },
-        { "label": "Kooperationsanfragen", "link": "/collaboration" },
         { "label": "Folgen auf Instagram", "link": "https://www.instagram.com/hci_tuberlin/" }
       ]
     }
