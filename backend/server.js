@@ -20,6 +20,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(languageMiddleware);
 
 app.use("/images", express.static(path.join(__dirname, "assets/images")));
+app.use("/pubs", express.static(path.join(__dirname, "assets/pubs")));
+
 app.use(
   "/photoSlider",
   express.static(path.join(__dirname, "assets/photoSlider")),
