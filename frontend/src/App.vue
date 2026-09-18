@@ -302,6 +302,18 @@ const setLanguage = (lang) => {
   router.go(0);
 };
 
+// Dates are stored as "DD.MM.YYYY" strings (see event.dates JSON)
+const parseEventDateValue = (value) => {
+  if (!value) return null;
+
+  const match = /^(\d{1,2})\.(\d{1,2})\.(\d{4})$/.exec(value.trim());
+  if (!match) return null;
+
+  const [, day, month, year] = match;
+  const parsed = new Date(Number(year), Number(month) - 1, Number(day));
+  return Number.isNaN(parsed.getTime()) ? null : parsed;
+};
+
 const upcomingEvents = computed(() => {
   if (!eventsData.value) return [];
 
@@ -309,7 +321,18 @@ const upcomingEvents = computed(() => {
     ? eventsData.value[0]
     : eventsData.value;
 
-  return events.filter((event) => event.is_active === 1 || true).slice(0, 3);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  return events
+    .filter((event) => {
+      const parsedDate = parseEventDateValue(getEventDate(event));
+      // Keep events whose date couldn't be parsed rather than hiding them
+      return !parsedDate || parsedDate >= today;
+    })
+    .slice()
+    .reverse() // events come back oldest-first, so newest added show first
+    .slice(0, 3);
 });
 
 const getEventDate = (event) => {
