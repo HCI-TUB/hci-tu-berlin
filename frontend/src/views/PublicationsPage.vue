@@ -99,7 +99,13 @@ const getYear = (date) => {
   const match = date.match(/\d{4}/);
   return match ? match[0] : date;
 };
-
+const getTime = (date) => {
+  if (!date) return 0;
+  const time = Date.parse(date);
+  if (!isNaN(time)) return time;
+  const year = String(date).match(/\d{4}/);
+  return year ? Date.UTC(Number(year[0]), 0, 1) : 0;
+};
 // Group papers by author
 const groupedPapers = computed(() => {
   const authorsOfChair = [
@@ -114,14 +120,16 @@ const groupedPapers = computed(() => {
   const grouped = {};
 
   cleanArray?.forEach((author) => {
-    grouped[author] = allPublications.value?.filter((paper) => {
-      try {
-        const authors = JSON.parse(paper.authors);
-        return authors.some((a) => a.name.includes(author));
-      } catch {
-        return false;
-      }
-    });
+    grouped[author] = allPublications.value
+      ?.filter((paper) => {
+        try {
+          const authors = JSON.parse(paper.authors);
+          return authors.some((a) => a.name.includes(author));
+        } catch {
+          return false;
+        }
+      })
+      .sort((a, b) => getTime(b.publicationDate) - getTime(a.publicationDate));
   });
 
   return grouped;

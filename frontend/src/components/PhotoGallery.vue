@@ -6,26 +6,34 @@
         <div
           v-for="(item, idx) in group.items"
           :key="idx"
-          class="w-full sm:w-[30%] md:w-[22%] lg:w-[22%] aspect-[4/3] bg-black rounded shadow flex items-center justify-center overflow-hidden cursor-pointer"
+          class="w-full sm:w-[30%] md:w-[22%] cursor-pointer"
           @click="openViewer(group.title, idx)"
         >
-          <img
-            v-if="item.type === 'image'"
-            :src="item.src"
-            :alt="item.caption"
-            class="object-cover w-full h-full rounded pointer-events-none"
-            draggable="false"
-          />
-          <video
-            v-else-if="item.type === 'video'"
-            :src="item.src"
-            class="object-cover w-full h-full rounded pointer-events-none"
-            muted
-            playsinline
-            :controls="false"
-            preload="metadata"
-            draggable="false"
-          ></video>
+          <div class="aspect-[4/3] bg-black rounded shadow overflow-hidden">
+            <img
+              v-if="item.type === 'image'"
+              :src="item.src"
+              :alt="item.caption"
+              class="object-cover w-full h-full rounded pointer-events-none"
+              draggable="false"
+            />
+            <video
+              v-else-if="item.type === 'video'"
+              :src="item.src"
+              class="object-cover w-full h-full rounded pointer-events-none"
+              muted
+              playsinline
+              :controls="false"
+              preload="metadata"
+              draggable="false"
+            ></video>
+          </div>
+          <div v-if="item.itemTitle" class="mt-2 font-semibold text-left">
+            {{ item.itemTitle }}
+          </div>
+          <div v-if="item.caption" class="mt-1 text-sm text-gray-600 text-left">
+            {{ item.caption }}
+          </div>
         </div>
       </div>
     </div>
@@ -108,7 +116,7 @@ const groups = computed(
   () => {
     const plainArray = toRaw(galleryData.value);
     return parseGalleryData(plainArray, props.titles);
-  }
+  },
   // galleryData.filter((group) => props.titles.includes(group.title))
 );
 

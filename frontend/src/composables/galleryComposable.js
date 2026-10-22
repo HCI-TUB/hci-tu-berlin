@@ -29,6 +29,7 @@ export function useGalleryData(slug) {
         grouped[item.title].items.push({
           id: item.id,
           src: item.src,
+          title: item.title,
           caption: item.caption,
           type: item.type,
           orientation: item.orientation,

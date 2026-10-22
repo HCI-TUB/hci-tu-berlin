@@ -58,18 +58,19 @@
       <div
         v-for="(section, index) in memberData?.education"
         :key="index"
-        class="grid grid-cols-1 sm:grid-cols-2 gap-4 transition mb-6"
       >
         <ul>
           <li>
             <div class="flex">
-              <span class="flex-1 md:justify-start">
-                <h3 class="text-xl font-semibold">{{ section.institute }}</h3>
-                <p class="mt-2">{{ section.degree }}</p>
+              <span class="flex-1 min-w-0 pr-4">
+                <h3 class="text-l font-semibold">{{ section.institute }}</h3>
+                <p class="mt-1 mb-4">{{ section.degree }}</p>
               </span>
-              <span class="text-sm md:justify-end pt-2">
+              <span class="text-sm text-right pt-2 shrink-0 w-36 sm:w-60">
                 <p>
-                  {{ formatDate(section.start_date) }} -
+                  <template v-if="section.start_date">
+                    {{ formatDate(section.start_date) }} -
+                  </template>
                   {{ formatDate(section.end_date) }}
                 </p>
                 <p>{{ section.place }}</p>
@@ -89,11 +90,11 @@
         <ul>
           <li>
             <div class="flex">
-              <span class="flex-1 md:justify-start">
+              <span class="flex-1 min-w-0 pr-4">
                 <h3 class="text-l font-semibold">{{ section.company }}</h3>
                 <p class="mt-1 mb-4">{{ section.position }}</p>
               </span>
-              <span class="text-sm md:justify-end pt-2">
+              <span class="text-sm text-right pt-2 shrink-0 w-36 sm:w-60">
                 <p>
                   {{ formatDate(section.start_date) }} -
                   {{
