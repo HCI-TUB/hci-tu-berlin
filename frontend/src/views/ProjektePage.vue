@@ -1,6 +1,8 @@
 <template>
   <div>
     <h1 class="text-3xl text-left mb-8 tracking-widest">Research</h1>
+    <PhotoGallery :titles="['Projects']" />
+    <PhotoGallery :titles="['Events']" />
     <div class="space-y-6">
       <div v-if="loading" class="text-center">Loading research projects...</div>
       <div
@@ -24,8 +26,6 @@
           />
         </router-link>
       </div>
-      <PhotoGallery :titles="['Events']" />
-      <PhotoGallery :titles="['Projects']" />
     </div>
   </div>
 </template>
